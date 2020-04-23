@@ -1,3 +1,20 @@
+@font-face {
+    font-family: "KarmillaRegular";
+    src: url("../fonts/karmilla/Karmilla-Regular.eot");
+    src: url("../fonts/karmilla/Karmilla-Regular.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/karmilla/Karmilla-Regular.woff") format("woff"),
+      url("../fonts/karmilla/Karmilla-Regular.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Karmilla-Bold";
+    src: url(".../fonts/karmilla/Karmilla-Bold.eot");
+    src: url("../fonts/karmilla/Karmilla-Bold.ttf.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/karmilla/Karmilla-Bold.woff") format("woff"),
+      url("../fonts/karmilla/Karmilla-Bold.ttf") format("truetype");
+  }
+  
+
 // fonts
 $karmilla: "Karmilla-Regular", Arial, sans-serif;
 $karmillaBold: "Karmilla-Bold", Arial, sans-serif;
