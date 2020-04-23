@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Karmilla-Regular";
-    src: url("../fonts/Karmilla-Regular.eot") format("embedded-opentype");
+    src: url("../fonts/karmilla/Karmilla-Regular.eot") format("embedded-opentype");
     font-weight: normal;
     font-style: normal;
   }
@@ -295,18 +295,18 @@
   MgI5jEA2IzMDIyMLABYdATkAAHjaY2BiAAFGBgioAGIWMF8UIv4fCIBssDyQ+Q9KgwGSPhCwgOtl
   YWADkmxgURkGYQYJqGosAADFxBUuAAAAAAEAAAAA0Wjl5AAAAADKFR0wAAAAANNopS4=)
         format("woff"),
-      url("../fonts/Karmilla-Regular.ttf") format("truetype"), url("Karmilla-Regular.svg#Karmilla-Regular") format("svg");
+      url("../fonts/karmilla/Karmilla-Regular.ttf") format("truetype"), url("../fonts/karmilla/Karmilla-Regular.svg#Karmilla-Regular") format("svg");
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
     font-family: "Karmilla-Bold";
-    src: url("../fonts/Karmilla-Bold.eot") format("embedded-opentype");
+    src: url("../fonts/karmilla/Karmilla-Bold.eot") format("embedded-opentype");
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
-    font-family: "../fonts/Karmilla-Bold";
+    font-family: "../fonts/karmilla/Karmilla-Bold";
     src: url(data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAD1IABEAAAAAajgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAA9LAAAABwA
   AAAcbuaoHU9TLzIAAAH4AAAAUQAAAGCFbzsGY21hcAAABPQAAAJuAAADwuvX1LhmZWF0AAA8tAAA
   ACYAAAAwwBoFWWdhc3AAADvwAAAACAAAAAj//wAEZ2x5ZgAACeAAACa8AABFNJwMzaBoZWFkAAAB
@@ -584,7 +584,7 @@
   YWADkmxgURkGYQYJiGpGK0ZrRhtGW0Y7RntGB0ZHRidGZwDd9xepAAAAAAAAAQAAAADRaOXkAAAA
   AMoVHTAAAAAA02ilCA==)
         format("woff"),
-      url("../fonts/Karmilla-Bold.ttf") format("truetype"), url("../fonts/Karmilla-Bold.svg#Karmilla-Bold") format("svg");
+      url("../fonts/karmilla/Karmilla-Bold.ttf") format("truetype"), url("../fonts/karmilla/Karmilla-Bold.svg#Karmilla-Bold") format("svg");
     font-weight: normal;
     font-style: normal;
   }
