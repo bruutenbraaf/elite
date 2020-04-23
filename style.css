@@ -1,0 +1,18 @@
+/*
+Theme Name: Elix
+Author: Bruut & Braaf
+Author URI: https://bruutebraaf.nl
+Description: <b>Vormgeving:<b> Dirk<br> <b>Ontwikkeling:</b> Emanuel<br> Met veel liefde gemaakt door Bruut & Braaf.
+Version: 0.0.1
+License: bruutenbraaf.nl
+License URI: /
+Text Domain: Elix
+
+/* algemeen */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700');
+@import url('css/bootstrap.min.css');
+@import url('css/fonts.css');
+@import url('css/style.min.css');
+
+
