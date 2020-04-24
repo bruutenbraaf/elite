@@ -35,7 +35,7 @@ a {
   letter-spacing: -0.08px;
   border-radius: 0px;
   border: 0px;
-  padding: 21px;
+  padding: 14px 16px 14px 22px;
   position: relative;
   background: #425cc7;
   margin-top: 50px; }
@@ -50,23 +50,10 @@ a {
     border-bottom: 0vh solid #425cc7; }
 
 .w-btn {
-  font-family: "Karmilla-Bold", Arial, sans-serif;
-  font-size: 1.125rem;
-  color: #ffffff;
-  letter-spacing: -0.08px;
-  border-radius: 0px;
-  border: 0px;
-  padding: 21px;
-  position: relative;
   background: #ffffff;
-  color: #425cc7;
-  margin-right: 20px; }
+  color: #425cc7; }
   .w-btn:after {
     content: "";
-    right: -20px;
-    top: 0px;
-    height: 100%;
-    position: absolute;
     border-top: 15px solid transparent;
     border-left: 20px solid #ffffff;
     border-bottom: 0vh solid #ffffff; }
@@ -83,7 +70,8 @@ nav {
     padding: 0;
     margin-right: -25px; }
     nav .main-navigation ul li {
-      padding: 0px 25px;
+      padding-left: 25px;
+      padding-right: 25px;
       float: left;
       list-style: none; }
       nav .main-navigation ul li a {
@@ -236,6 +224,8 @@ nav {
   margin-top: 70px;
   overflow: hidden;
   position: relative; }
+  .call-out .btn {
+    margin-top: 0px; }
   .call-out .bg-i {
     position: absolute;
     width: calc(100% - 36px);

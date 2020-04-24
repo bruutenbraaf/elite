@@ -39,7 +39,7 @@ if (!empty($block['align'])) {
                             <span><?php the_sub_field('titel'); ?></span>
                             <?php $knop = get_sub_field('knop'); ?>
                             <?php if ($knop) { ?>
-                                <a class="w-btn" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                <a class="btn w-btn" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
                             <?php } ?>
                         </div>
                     </div>
