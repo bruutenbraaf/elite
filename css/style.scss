@@ -2,18 +2,17 @@
     font-family: "KarmillaRegular";
     src: url("../fonts/karmilla/Karmilla-Regular.eot");
     src: url("../fonts/karmilla/Karmilla-Regular.eot?#iefix") format("embedded-opentype"),
-      url("../fonts/karmilla/Karmilla-Regular.woff") format("woff"),
-      url("../fonts/karmilla/Karmilla-Regular.ttf") format("truetype");
-  }
-  
-  @font-face {
+        url("../fonts/karmilla/Karmilla-Regular.woff") format("woff"),
+        url("../fonts/karmilla/Karmilla-Regular.ttf") format("truetype");
+}
+
+@font-face {
     font-family: "Karmilla-Bold";
     src: url(".../fonts/karmilla/Karmilla-Bold.eot");
     src: url("../fonts/karmilla/Karmilla-Bold.ttf.eot?#iefix") format("embedded-opentype"),
-      url("../fonts/karmilla/Karmilla-Bold.woff") format("woff"),
-      url("../fonts/karmilla/Karmilla-Bold.ttf") format("truetype");
-  }
-  
+        url("../fonts/karmilla/Karmilla-Bold.woff") format("woff"),
+        url("../fonts/karmilla/Karmilla-Bold.ttf") format("truetype");
+}
 
 // fonts
 $karmilla: "Karmilla-Regular", Arial, sans-serif;
@@ -42,6 +41,17 @@ p {
     color: #252525;
     letter-spacing: -0.07px;
     line-height: 31px;
+    a {
+        color: $mainColor;
+        text-decoration: underline;
+        &:hover {
+            color: $paragraphColor;
+        }
+    }
+}
+
+a {
+    transition: ease-in-out 0.2s;
 }
 
 // Buttons
@@ -97,7 +107,7 @@ p {
 
 nav {
     position: fixed;
-    top: 128px;
+    top: 80px;
     left: 0;
     width: 100%;
     z-index: 100;
@@ -160,6 +170,15 @@ nav {
 
 .nav--change {
     top: 0px;
+    .main-navigation {
+        ul {
+            li {
+                a {
+                    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.0);
+                }
+            }
+        }
+    }
 }
 
 .nav--bg {
@@ -169,10 +188,13 @@ nav {
 .elix {
     position: relative;
     top: 0px;
+    width: 171px;
+    height: 106px;
 }
 
 .elixcanged {
-    top: 25px;
+    top: 15px;
+    width: 120px;
 }
 
 .running-your-energy {
@@ -188,8 +210,9 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 100vw;
-    min-height: 110vh;
+    min-height: 100vh;
     margin-top: 36px;
+    margin-right: 36px;
     overflow: hidden;
     position: relative;
     &:after {
@@ -210,7 +233,7 @@ nav {
             position: relative;
             margin-bottom: 12.5rem;
             z-index: 1;
-            margin-right: -4rem;
+            margin-right: calc(-35px + -3rem);
             &:after {
                 content: "";
                 position: absolute;
@@ -298,13 +321,13 @@ nav {
     position: relative;
     .bg-i {
         position: absolute;
-        width: 100%;
+        width: calc(100% - 36px);
         height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center right;
         top: 30px;
-        left: 0;
+        left: 0px;
     }
     .c-content {
         margin-bottom: 21rem;
@@ -341,9 +364,9 @@ nav {
             transform: rotate(-180deg);
             transform-origin: right;
         }
-        h2 {
+        span {
             font-family: $karmillaBold;
-            font-size: 47.68px;
+            font-size: 3rem;
             color: #ffffff;
             letter-spacing: -0.19px;
             line-height: 66px;
@@ -378,6 +401,11 @@ footer {
                 color: #252525;
                 letter-spacing: -0.07px;
                 line-height: 38px;
+                &:hover {
+                    color: $paragraphColor;
+                    opacity: 1;
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -409,6 +437,12 @@ footer {
                 left: 0;
                 top: 50%;
                 transform: translate(0, -50%);
+            }
+        }
+        .tel {
+            svg {
+                margin-left: 3px;
+                margin-right: -3px;
             }
         }
     }

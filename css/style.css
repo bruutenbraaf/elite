@@ -19,6 +19,14 @@ p {
   color: #252525;
   letter-spacing: -0.07px;
   line-height: 31px; }
+  p a {
+    color: #425cc7;
+    text-decoration: underline; }
+    p a:hover {
+      color: #252525; }
+
+a {
+  transition: ease-in-out 0.2s; }
 
 .btn {
   font-family: "Karmilla-Bold", Arial, sans-serif;
@@ -65,7 +73,7 @@ p {
 
 nav {
   position: fixed;
-  top: 128px;
+  top: 80px;
   left: 0;
   width: 100%;
   z-index: 100;
@@ -114,16 +122,21 @@ nav {
 
 .nav--change {
   top: 0px; }
+  .nav--change .main-navigation ul li a {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0); }
 
 .nav--bg {
   background: #425cc7; }
 
 .elix {
   position: relative;
-  top: 0px; }
+  top: 0px;
+  width: 171px;
+  height: 106px; }
 
 .elixcanged {
-  top: 25px; }
+  top: 15px;
+  width: 120px; }
 
 .running-your-energy {
   opacity: 1; }
@@ -135,8 +148,9 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 100vw;
-  min-height: 110vh;
+  min-height: 100vh;
   margin-top: 36px;
+  margin-right: 36px;
   overflow: hidden;
   position: relative; }
   .h-header:after {
@@ -156,7 +170,7 @@ nav {
       position: relative;
       margin-bottom: 12.5rem;
       z-index: 1;
-      margin-right: -4rem; }
+      margin-right: calc(-35px + -3rem); }
       .h-header .container .int-block:after {
         content: "";
         position: absolute;
@@ -224,13 +238,13 @@ nav {
   position: relative; }
   .call-out .bg-i {
     position: absolute;
-    width: 100%;
+    width: calc(100% - 36px);
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center right;
     top: 30px;
-    left: 0; }
+    left: 0px; }
   .call-out .c-content {
     margin-bottom: 21rem;
     position: relative;
@@ -263,9 +277,9 @@ nav {
       background: #ffffff;
       transform: rotate(-180deg);
       transform-origin: right; }
-    .call-out .c-content h2 {
+    .call-out .c-content span {
       font-family: "Karmilla-Bold", Arial, sans-serif;
-      font-size: 47.68px;
+      font-size: 3rem;
       color: #ffffff;
       letter-spacing: -0.19px;
       line-height: 66px; }
@@ -295,6 +309,10 @@ footer {
         color: #252525;
         letter-spacing: -0.07px;
         line-height: 38px; }
+        footer ul li a:hover {
+          color: #252525;
+          opacity: 1;
+          text-decoration: none; }
   footer p {
     opacity: 0.7;
     font-family: "Karmilla-Regular", Arial, sans-serif;
@@ -321,5 +339,8 @@ footer {
         left: 0;
         top: 50%;
         transform: translate(0, -50%); }
+    footer .c-con .tel svg {
+      margin-left: 3px;
+      margin-right: -3px; }
 
 /*# sourceMappingURL=style.css.map */

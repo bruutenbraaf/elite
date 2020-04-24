@@ -27,21 +27,16 @@ if (!empty($block['align'])) {
 }
 ?>
 
-<style type="text/css">
-    <?php echo '#' . $id; ?> {
-        /* Add styles that use ACF values here */
-    }
-</style>
 <?php if (have_rows('call_out')) : ?>
     <?php while (have_rows('call_out')) : the_row(); ?>
         <?php $achtergrond_afbeelding = get_sub_field('achtergrond_afbeelding'); ?>
-        <section id="<?php echo esc_attr($id); ?>" class="call-out <?php echo esc_attr($classes); ?>">
+        <section class="call-out <?php echo esc_attr($classes); ?>">
             <div class="bg-i" <?php if ($achtergrond_afbeelding) { ?>style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['large']; ?>);" <?php } ?>></div>
             <div class="container">
                 <div class="row d-flex align-content-between flex-wrap">
                     <div class="col-md-12 c-content">
                         <div class="b-g d-flex justify-content-between align-items-center">
-                            <h2><?php the_sub_field('titel'); ?></h2>
+                            <span><?php the_sub_field('titel'); ?></span>
                             <?php $knop = get_sub_field('knop'); ?>
                             <?php if ($knop) { ?>
                                 <a class="w-btn" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>

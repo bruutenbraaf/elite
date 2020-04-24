@@ -27,13 +27,8 @@ if (!empty($block['align'])) {
 }
 ?>
 
-<style type="text/css">
-    <?php echo '#' . $id; ?> {
-        /* Add styles that use ACF values here */
-    }
-</style>
 
-<section id="<?php echo esc_attr($id); ?>" class="h-content <?php echo esc_attr($classes); ?>">
+<section class="h-content <?php echo esc_attr($classes); ?>">
     <div class="container">
         <div class="row">
             <?php if (have_rows('intro_tekst')) : ?>

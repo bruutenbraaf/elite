@@ -27,14 +27,9 @@ if (!empty($block['align'])) {
 }
 ?>
 
-<style type="text/css">
-    <?php echo '#' . $id; ?> {
-        /* Add styles that use ACF values here */
-    }
-</style>
 
 <?php $achtergrond_afbeelding = get_field('achtergrond_afbeelding'); ?>
-<section id="<?php echo esc_attr($id); ?>" class="h-header d-flex align-items-end justify-content-end<?php echo esc_attr($classes); ?>" style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['large']; ?>);">
+<section class="h-header d-flex align-items-end justify-content-end<?php echo esc_attr($classes); ?>" style="background-image:url(<?php echo $achtergrond_afbeelding['sizes']['large']; ?>);">
     <?php if (have_rows('intro_tekst')) : ?>
         <?php while (have_rows('intro_tekst')) : the_row(); ?>
             <div class="container">

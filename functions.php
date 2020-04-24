@@ -1,6 +1,13 @@
 <?php
 add_theme_support('post-thumbnails');
+add_theme_support('editor-styles');
 add_image_size('home', 1920, 600, true);
+
+
+function elix_add_editor_styles() {
+    add_editor_style( 'style-editor.css' );
+}
+add_action( 'admin_init', 'elix_add_editor_styles' );
 
 
 function flexupdate_scripts()
@@ -88,7 +95,6 @@ function arphabet_widgets_init()
 }
 
 
-
 // ACF Blocks - Homepagina header
 add_action('acf/init', 'header_block');
 function header_block() {
@@ -115,7 +121,6 @@ function home_header_render( $block ) {
 		include( get_theme_file_path("/template-parts/block/content-{$slug}.php") );
 	}
 }
-
 
 
 // ACF Blocks - Homepagina content
@@ -145,8 +150,6 @@ function home_content_render( $block ) {
 	}
 }
 
-
-
 // ACF Blocks - Homepagina content
 add_action('acf/init', 'home_callout');
 function home_callout() {
@@ -173,3 +176,27 @@ function home_callout_render( $block ) {
 		include( get_theme_file_path("/template-parts/block/content-{$slug}.php") );
 	}
 }
+
+
+
+
+
+
+
+add_theme_support( 'editor-color-palette', array(
+	array(
+		'name'  => __( 'Blue', 'ea_genesis_child' ),
+		'slug'  => 'blue',
+		'color'	=> '#425CC7',
+	),
+	array(
+		'name'  => __( 'Paragraph', 'ea_genesis_child' ),
+		'slug'  => 'Paragraph',
+		'color' => '#252525',
+	),
+) );
+
+add_theme_support( 'disable-custom-colors' );
+add_theme_support('editor-gradient-presets', []);
+add_theme_support('disable-custom-gradients', true);
+add_theme_support( 'disable-custom-radius' );

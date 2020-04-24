@@ -4,7 +4,7 @@
             <div class="col-4">
                 <?php the_field('korte_over_ons', 'option'); ?>
                 <div class="c-con">
-                    <a href="tel:<?php the_field('telefoonnummer', 'option'); ?>">
+                    <a class="tel" href="tel:<?php the_field('telefoonnummer', 'option'); ?>">
                         <svg width="15px" height="25px" viewBox="0 0 15 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988" stroke-linecap="round" stroke-linejoin="round">
                                 <g id="homepage" transform="translate(-226.000000, -2586.000000)" stroke="#000000" stroke-width="1.008">
@@ -22,7 +22,7 @@
                         </svg>
                         <?php the_field('telefoonnummer', 'option'); ?>
                     </a>
-                    <a href="mailto:<?php the_field('e-mailadres', 'option'); ?>">
+                    <a class="mail" href="mailto:<?php the_field('e-mailadres', 'option'); ?>">
                         <svg width="22px" height="17px" viewBox="0 0 22 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988" stroke-linecap="round" stroke-linejoin="round">
                                 <g id="homepage" transform="translate(-222.000000, -2630.000000)" stroke="#000000" stroke-width="0.9025">

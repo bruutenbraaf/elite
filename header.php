@@ -18,7 +18,7 @@
             <div class="row d-flex align-items-center">
                 <div class="branding">
                     <a href="<?php echo get_home_url(); ?>">
-                        <svg class="elix" width="171px" height="106px" viewBox="0 0 171 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <svg class="elix" viewBox="0 0 171 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <g id="homepage" transform="translate(-222.000000, -119.000000)" fill="#FFFFFF">
                                     <g id="Header" transform="translate(-4.000000, 36.000000)">
