@@ -1,7 +1,156 @@
+@font-face {
+  font-family: "KarmillaRegular";
+  src: url("../fonts/karmilla/Karmilla-Regular.eot");
+  src: url("../fonts/karmilla/Karmilla-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/karmilla/Karmilla-Regular.woff") format("woff"), url("../fonts/karmilla/Karmilla-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: "Karmilla-Bold";
+  src: url(".../fonts/karmilla/Karmilla-Bold.eot");
+  src: url("../fonts/karmilla/Karmilla-Bold.ttf.eot?#iefix") format("embedded-opentype"), url("../fonts/karmilla/Karmilla-Bold.woff") format("woff"), url("../fonts/karmilla/Karmilla-Bold.ttf") format("truetype"); }
+* {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+h2 {
+  font-family: "Karmilla-Bold", Arial, sans-serif;
+  font-size: 1.75rem;
+  color: #252525;
+  line-height: 31px;
+  letter-spacing: -0.11px; }
+
+h3 {
+  font-family: "Karmilla-Bold", Arial, sans-serif;
+  font-size: 1.5rem;
+  color: #252525;
+  letter-spacing: -0.09px;
+  line-height: 31px; }
+
+p {
+  font-family: "Karmilla-Regular", Arial, sans-serif;
+  font-size: 1.125rem;
+  color: #252525;
+  letter-spacing: -0.07px;
+  line-height: 31px; }
+  p a {
+    color: #425cc7;
+    text-decoration: underline; }
+    p a:hover {
+      color: #252525; }
+
+a {
+  transition: ease-in-out 0.2s; }
+
 .wp-block {
-    max-width: 1140px;
-}
+  max-width: 1140px; }
 
 .wp-block[data-align="wide"] {
-    max-width: 1140px;
-}
+  max-width: 1140px; }
+
+.wp-block-content-section {
+  border: 1px dotted;
+  padding: 3rem; }
+
+.has-blue-block-color {
+  background: #425cc7;
+  color: #ffffff; }
+  .has-blue-block-color h1,
+  .has-blue-block-color h2,
+  .has-blue-block-color h3,
+  .has-blue-block-color h4,
+  .has-blue-block-color h5,
+  .has-blue-block-color p {
+    color: #ffffff; }
+
+.btn,
+.wp-block-button .wp-block-button__link,
+.has-blue-block-color .wp-block-buttons .wp-block-button__link {
+  font-family: "Karmilla-Bold", Arial, sans-serif;
+  font-size: 1.125rem;
+  color: #ffffff;
+  letter-spacing: -0.08px;
+  border-radius: 0px;
+  border: 0px;
+  padding: 14px 16px 14px 22px;
+  position: relative;
+  background: #425cc7;
+  transition: ease-in-out 0.2s !important; }
+  .btn:after,
+  .wp-block-button .wp-block-button__link:after,
+  .has-blue-block-color .wp-block-buttons .wp-block-button__link:after {
+    content: "";
+    right: -20px;
+    top: 0px;
+    height: 100%;
+    position: absolute;
+    border-top: 15px solid transparent;
+    border-left: 20px solid #425cc7;
+    border-bottom: 0vh solid #425cc7;
+    transition: ease-in-out 0.2s !important; }
+  .btn:hover,
+  .wp-block-button .wp-block-button__link:hover,
+  .has-blue-block-color .wp-block-buttons .wp-block-button__link:hover {
+    background: #304497; }
+    .btn:hover:after,
+    .wp-block-button .wp-block-button__link:hover:after,
+    .has-blue-block-color .wp-block-buttons .wp-block-button__link:hover:after {
+      border-left: 20px solid #304497;
+      border-bottom: 0vh solid #304497; }
+  .btn:active, .btn:focus,
+  .wp-block-button .wp-block-button__link:active,
+  .wp-block-button .wp-block-button__link:focus,
+  .has-blue-block-color .wp-block-buttons .wp-block-button__link:active,
+  .has-blue-block-color .wp-block-buttons .wp-block-button__link:focus {
+    background: #233375; }
+    .btn:active:after, .btn:focus:after,
+    .wp-block-button .wp-block-button__link:active:after,
+    .wp-block-button .wp-block-button__link:focus:after,
+    .has-blue-block-color .wp-block-buttons .wp-block-button__link:active:after,
+    .has-blue-block-color .wp-block-buttons .wp-block-button__link:focus:after {
+      border-left: 20px solid #233375;
+      border-bottom: 0vh solid #233375; }
+
+.w-btn,
+.has-blue-block-color .wp-block-buttons .wp-block-button__link {
+  background: #ffffff;
+  color: #425cc7; }
+  .w-btn:after,
+  .has-blue-block-color .wp-block-buttons .wp-block-button__link:after {
+    content: "";
+    border-top: 15px solid transparent;
+    border-left: 20px solid #ffffff;
+    border-bottom: 0vh solid #ffffff; }
+  .w-btn:hover,
+  .has-blue-block-color .wp-block-buttons .wp-block-button__link:hover {
+    color: #304497;
+    background: #ffffff; }
+    .w-btn:hover:after,
+    .has-blue-block-color .wp-block-buttons .wp-block-button__link:hover:after {
+      border-left: 20px solid #ffffff;
+      border-bottom: 0vh solid #ffffff; }
+  .w-btn:active,
+  .has-blue-block-color .wp-block-buttons .wp-block-button__link:active {
+    color: #233375;
+    background: #ffffff; }
+    .w-btn:active:after,
+    .has-blue-block-color .wp-block-buttons .wp-block-button__link:active:after {
+      border-left: 20px solid #ffffff;
+      border-bottom: 0vh solid #ffffff; }
+
+.addmark {
+  position: relative; }
+  .addmark:after {
+    content: "";
+    width: 130px;
+    height: 200px;
+    transform: rotate(-26deg) translate(-50%, 30%);
+    background: #fff;
+    position: absolute;
+    right: 94px;
+    bottom: 0; }
+
+.addpadding {
+  padding-right: 294px; }
+
+/*# sourceMappingURL=style-editor.css.map */

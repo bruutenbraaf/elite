@@ -179,6 +179,35 @@ function home_callout_render( $block ) {
 
 
 
+// ACF Blocks - Pagina Elix waarden
+add_action('acf/init', 'page_elixwaarden');
+function page_elixwaarden() {
+	
+	// check function exists
+	if( function_exists('acf_register_block') ) {
+		
+		acf_register_block(array(
+			'name'				=> 'pageelixwaarden',
+			'title'				=> __('Elix waarden'),
+			'description'		=> __('Voeg een contentblock toe onder de header'),
+			'render_callback'	=> 'page_elixwaarden_render',
+			'category'			=> 'formatting',
+			'icon'				=> 'dashicons-art',
+			'keywords'			=> array( 'content', 'pagina', 'waarden', 'elix', 'elix waarden' ),
+		));
+	}
+}
+
+function page_elixwaarden_render( $block ) {
+
+	$slug = str_replace('acf/', '', $block['name']);
+	if( file_exists( get_theme_file_path("/template-parts/block/content-{$slug}.php") ) ) {
+		include( get_theme_file_path("/template-parts/block/content-{$slug}.php") );
+	}
+}
+
+
+
 
 
 
@@ -200,3 +229,37 @@ add_theme_support( 'disable-custom-colors' );
 add_theme_support('editor-gradient-presets', []);
 add_theme_support('disable-custom-gradients', true);
 add_theme_support( 'disable-custom-radius' );
+
+
+
+
+
+
+
+
+
+
+//Gutenberg block script rout
+if( !defined( 'WP_BLOCKS_URL' ) ) {
+    define( 'WP_BLOCKS_URL', get_template_directory_uri() . '/blocks/' );
+}
+
+//Register Gutenberg block
+function content_gutenberg_block() {
+
+    if( !function_exists('register_block_type') ) return; //Gutenberg is not active
+
+    //Script version
+    $version = time(); //Сhange to a fixed number after development
+
+    //Section block script
+    wp_register_script(
+        'wp-section-block-script', WP_BLOCKS_URL . 'section/block.js', array( 'wp-blocks', 'wp-element', 'wp-editor' ), $version
+    );
+
+    //Register block
+    register_block_type( 'content/section', array(
+        'editor_script' => 'wp-section-block-script',
+    ));
+}
+add_action( 'init', 'content_gutenberg_block' );

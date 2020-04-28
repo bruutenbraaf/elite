@@ -204,3 +204,12 @@ if ('accepted' !== jQuery.cookie('acceptcookies')) {
     jQuery.cookie('acceptcookies', 'accepted', { expires: 2, path: '/' });
   });
 }
+
+
+
+
+
+
+
+
+jQuery(".wp-block-group").addClass("container");

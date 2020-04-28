@@ -1,0 +1,185 @@
+@font-face {
+    font-family: "KarmillaRegular";
+    src: url("../fonts/karmilla/Karmilla-Regular.eot");
+    src: url("../fonts/karmilla/Karmilla-Regular.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/karmilla/Karmilla-Regular.woff") format("woff"),
+        url("../fonts/karmilla/Karmilla-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Karmilla-Bold";
+    src: url(".../fonts/karmilla/Karmilla-Bold.eot");
+    src: url("../fonts/karmilla/Karmilla-Bold.ttf.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/karmilla/Karmilla-Bold.woff") format("woff"),
+        url("../fonts/karmilla/Karmilla-Bold.ttf") format("truetype");
+}
+
+// fonts
+$karmilla: "Karmilla-Regular", Arial, sans-serif;
+$karmillaBold: "Karmilla-Bold", Arial, sans-serif;
+
+// colors
+$mainColor: #425cc7;
+$paragraphColor: #252525;
+
+// body
+
+* {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+}
+
+h2 {
+    font-family: $karmillaBold;
+    font-size: 1.75rem;
+    color: $paragraphColor;
+    line-height: 31px;
+    letter-spacing: -0.11px;
+}
+
+h3 {
+    font-family: $karmillaBold;
+    font-size: 1.5rem;
+    color: $paragraphColor;
+    letter-spacing: -0.09px;
+    line-height: 31px;
+}
+
+p {
+    font-family: $karmilla;
+    font-size: 1.125rem;
+    color: #252525;
+    letter-spacing: -0.07px;
+    line-height: 31px;
+    a {
+        color: $mainColor;
+        text-decoration: underline;
+        &:hover {
+            color: $paragraphColor;
+        }
+    }
+}
+
+a {
+    transition: ease-in-out 0.2s;
+}
+
+.wp-block {
+    max-width: 1140px;
+}
+
+.wp-block[data-align="wide"] {
+    max-width: 1140px;
+}
+
+.wp-block-content-section {
+    border: 1px dotted;
+    padding: 3rem;
+}
+
+.has-blue-block-color {
+    background: $mainColor;
+    color: #ffffff;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+        color: #ffffff;
+    }
+}
+
+
+.btn,
+.wp-block-button .wp-block-button__link,
+.has-blue-block-color .wp-block-buttons .wp-block-button__link {
+    font-family: $karmillaBold;
+    font-size: 1.125rem;
+    color: #ffffff;
+    letter-spacing: -0.08px;
+    border-radius: 0px;
+    border: 0px;
+    padding: 14px 16px 14px 22px;
+    position: relative;
+    background: $mainColor;
+    transition: ease-in-out 0.2s !important;
+    &:after {
+        content: "";
+        right: -20px;
+        top: 0px;
+        height: 100%;
+        position: absolute;
+        border-top: 15px solid transparent;
+        border-left: 20px solid $mainColor;
+        border-bottom: 0vh solid $mainColor;
+        transition: ease-in-out 0.2s !important;
+    }
+    &:hover {
+        background: #304497;
+        &:after {
+            border-left: 20px solid #304497;
+            border-bottom: 0vh solid #304497;
+        }
+    }
+    &:active,
+    &:focus {
+        background: #233375;
+        &:after {
+            border-left: 20px solid #233375;
+            border-bottom: 0vh solid #233375;
+        }
+    }
+}
+
+.w-btn,
+.has-blue-block-color .wp-block-buttons .wp-block-button__link {
+    background: #ffffff;
+    color: $mainColor;
+    &:after {
+        content: "";
+        border-top: 15px solid transparent;
+        border-left: 20px solid #ffffff;
+        border-bottom: 0vh solid #ffffff;
+    }
+    &:hover {
+        color: #304497;
+        background: #ffffff;
+        &:after {
+            border-left: 20px solid #ffffff;
+            border-bottom: 0vh solid #ffffff;
+        }
+    }
+    &:active {
+        color: #233375;
+        background: #ffffff;
+        &:after {
+            border-left: 20px solid #ffffff;
+            border-bottom: 0vh solid #ffffff;
+        }
+    }
+}
+
+.addmark {
+    position: relative;
+    &:after {
+        content: "";
+        width: 130px;
+        height: 200px;
+        transform: rotate(-26deg) translate(-50%, 30%);
+        background: #fff;
+        position: absolute;
+        right: 94px;
+        bottom: 0;
+    }
+}
+
+.addpadding {
+    padding-right: 294px;
+}
