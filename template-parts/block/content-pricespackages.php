@@ -64,7 +64,10 @@ if (!empty($block['align'])) {
 					<div class="price text-center">
 						<?php while (have_rows('price')) : the_row(); ?>
 							<?php the_sub_field('kosten'); ?>
-							<?php the_sub_field('kosten_per:'); ?>
+							<?php $kost_per = get_sub_field('kosten_per:');?>
+							<?php if ($kost_per != 'Vast bedrag') {?>
+								<span><?php the_sub_field('kosten_per:'); ?></span>
+							<?php } ?>
 						<?php endwhile; ?>
 					</div>
 				<?php endif; ?>
