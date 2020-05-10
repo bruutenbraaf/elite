@@ -789,6 +789,7 @@ footer {
 
 .is-style-delete-edge {
   min-width: calc(100% + 3rem);
-  margin-bottom: -4rem; }
+  margin-bottom: -4rem;
+  display: flex; }
 
 /*# sourceMappingURL=style.css.map */
