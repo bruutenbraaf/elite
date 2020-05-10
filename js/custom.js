@@ -206,10 +206,13 @@ if ('accepted' !== jQuery.cookie('acceptcookies')) {
 }
 
 
-
-
-
-
-
-
 jQuery(".wp-block-group").addClass("container");
+
+
+var maxHeight = 0;
+
+jQuery(".in").each(function(){
+   if (jQuery(this).height() > maxHeight) { maxHeight = jQuery(this).height(); }
+});
+
+jQuery(".in").height(maxHeight);

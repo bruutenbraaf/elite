@@ -10,13 +10,14 @@ function elix_add_editor_styles() {
 add_action( 'admin_init', 'elix_add_editor_styles' );
 
 
+
+// Load scripts & css
 function flexupdate_scripts()
 {
 	// Scripts
 	wp_enqueue_script('jquery', get_template_directory_uri() . '/bootstrap/js/jquery.min.js', array(), '1.0.0', true);
 	wp_enqueue_script('bootjs', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array(), '1.0.0', true);
 	wp_enqueue_script('slickslider', get_template_directory_uri() . '/js/slick.min.js', array(), '1.0.0', true);
-	wp_enqueue_script('cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array(), '1.0.0', false);
 
 	// Scrollmagic
 	wp_enqueue_script('TweenMax', get_template_directory_uri() . '/js/TweenMax.min.js', array(), '1.0.0', true);
@@ -33,10 +34,7 @@ function flexupdate_scripts()
 }
 add_action('wp_enqueue_scripts', 'flexupdate_scripts');
 
-
-
 // Add option page
-
 acf_add_options_page(array(
 
 	'page_title' 	=> 'Website informatie',
@@ -48,9 +46,7 @@ acf_add_options_page(array(
 
 ));
 
-
 // Menu's
-
 function register_my_menus()
 {
 	register_nav_menus(
@@ -94,12 +90,10 @@ function arphabet_widgets_init()
 	));
 }
 
-
 // ACF Blocks - Homepagina header
 add_action('acf/init', 'header_block');
 function header_block() {
 	
-	// check function exists
 	if( function_exists('acf_register_block') ) {
 		
 		acf_register_block(array(
@@ -122,12 +116,10 @@ function home_header_render( $block ) {
 	}
 }
 
-
 // ACF Blocks - Homepagina content
 add_action('acf/init', 'home_content');
 function home_content() {
 	
-	// check function exists
 	if( function_exists('acf_register_block') ) {
 		
 		acf_register_block(array(
@@ -153,8 +145,7 @@ function home_content_render( $block ) {
 // ACF Blocks - Homepagina content
 add_action('acf/init', 'home_callout');
 function home_callout() {
-	
-	// check function exists
+
 	if( function_exists('acf_register_block') ) {
 		
 		acf_register_block(array(
@@ -177,13 +168,10 @@ function home_callout_render( $block ) {
 	}
 }
 
-
-
 // ACF Blocks - Pagina Elix waarden
 add_action('acf/init', 'page_elixwaarden');
 function page_elixwaarden() {
 	
-	// check function exists
 	if( function_exists('acf_register_block') ) {
 		
 		acf_register_block(array(
@@ -206,11 +194,125 @@ function page_elixwaarden_render( $block ) {
 	}
 }
 
+// Prijzen pakket
+add_action('acf/init', 'pricepackage');
+function pricepackage() {
+	
+	if( function_exists('acf_register_block') ) {
+		
+		acf_register_block(array(
+			'name'				=> 'pricespackages',
+			'title'				=> __('Prijs pakket'),
+			'description'		=> __('Voeg een prijs pakket toe'),
+			'render_callback'	=> 'pricespackages_render',
+			'category'			=> 'formatting',
+			'icon'				=> 'f323',
+			'keywords'			=> array( 'prijs', 'pakket' ),
+		));
+	}
+}
 
+function pricespackages_render( $block ) {
+	
+	// convert name ("acf/testimonial") into path friendly slug ("testimonial")
+	$slug = str_replace('acf/', '', $block['name']);
+	
+	// include a template part from within the "template-parts/block" folder
+	if( file_exists( get_theme_file_path("/template-parts/block/content-{$slug}.php") ) ) {
+		include( get_theme_file_path("/template-parts/block/content-{$slug}.php") );
+	}
+}
 
+// USPS
+add_action('acf/init', 'usps');
+function usps() {
+	
+	if( function_exists('acf_register_block') ) {
 
+		acf_register_block(array(
+			'name'				=> 'usps',
+			'title'				=> __('Unique selling points'),
+			'description'		=> __('Voeg usps toe'),
+			'render_callback'	=> 'usps_render',
+			'category'			=> 'formatting',
+			'icon'				=> 'f323',
+			'keywords'			=> array( 'prijs', 'pakket' ),
+		));
+	}
+}
 
+function usps_render( $block ) {
+	
+	// convert name ("acf/testimonial") into path friendly slug ("testimonial")
+	$slug = str_replace('acf/', '', $block['name']);
+	
+	// include a template part from within the "template-parts/block" folder
+	if( file_exists( get_theme_file_path("/template-parts/block/content-{$slug}.php") ) ) {
+		include( get_theme_file_path("/template-parts/block/content-{$slug}.php") );
+	}
+}
 
+// Blokken carrousel
+add_action('acf/init', 'carrousel');
+function carrousel() {
+	
+
+	if( function_exists('acf_register_block') ) {
+		
+		acf_register_block(array(
+			'name'				=> 'carrousel',
+			'title'				=> __('Blokken carrousel'),
+			'description'		=> __('Voeg carrousel toe'),
+			'render_callback'	=> 'carrousel_render',
+			'category'			=> 'formatting',
+			'icon'				=> 'f323',
+			'keywords'			=> array( 'carrousel', 'slider', 'diensten', 'rotator' ),
+		));
+	}
+}
+
+function carrousel_render( $block ) {
+	
+	// convert name ("acf/testimonial") into path friendly slug ("testimonial")
+	$slug = str_replace('acf/', '', $block['name']);
+	
+	// include a template part from within the "template-parts/block" folder
+	if( file_exists( get_theme_file_path("/template-parts/block/content-{$slug}.php") ) ) {
+		include( get_theme_file_path("/template-parts/block/content-{$slug}.php") );
+	}
+}
+
+// Werkwijze
+add_action('acf/init', 'werkwijze');
+function werkwijze() {
+	
+
+	if( function_exists('acf_register_block') ) {
+		
+		acf_register_block(array(
+			'name'				=> 'werkwijze',
+			'title'				=> __('Werkwijze'),
+			'description'		=> __('Voeg werkwijze toe'),
+			'render_callback'	=> 'werkwijze_render',
+			'category'			=> 'formatting',
+			'icon'				=> 'f323',
+			'keywords'			=> array( 'werkwijze', 'diensten' ),
+		));
+	}
+}
+
+function werkwijze_render( $block ) {
+	
+	// convert name ("acf/testimonial") into path friendly slug ("testimonial")
+	$slug = str_replace('acf/', '', $block['name']);
+	
+	// include a template part from within the "template-parts/block" folder
+	if( file_exists( get_theme_file_path("/template-parts/block/content-{$slug}.php") ) ) {
+		include( get_theme_file_path("/template-parts/block/content-{$slug}.php") );
+	}
+}
+
+// Kleuren pallet
 
 add_theme_support( 'editor-color-palette', array(
 	array(
@@ -232,19 +334,12 @@ add_theme_support( 'disable-custom-radius' );
 
 
 
-
-
-
-
-
-
-
 //Gutenberg block script rout
 if( !defined( 'WP_BLOCKS_URL' ) ) {
     define( 'WP_BLOCKS_URL', get_template_directory_uri() . '/blocks/' );
 }
 
-//Register Gutenberg block
+//Register Gutenberg block section
 function content_gutenberg_block() {
 
     if( !function_exists('register_block_type') ) return; //Gutenberg is not active

@@ -18,14 +18,10 @@ get_header(); ?>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row flex-wrap">
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <?php the_content(); ?>
-                <?php endwhile;
-            else : ?>
-            <?php endif; ?>
-        </div>
-    </div>
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <?php the_content(); ?>
+        <?php endwhile;
+    else : ?>
+    <?php endif; ?>
 </main>
 <?php get_footer(); ?>

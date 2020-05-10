@@ -23,6 +23,11 @@
             name: 'White',
             slug: 'white',
             color: '#ffffff'
+        },
+        {
+            name: 'Grey',
+            slug: 'blue',
+            color: '#F3F3F3'
         }
     ];
 
@@ -54,7 +59,10 @@
         edit: withColors('blockColor')(function (props) {
 
             var blockClasses = ((props.blockColor.class || '') + ' ' + props.className).trim();
-            var blockShadow = (props.attributes.doubleoptin == true ? 'addmark' : 'nomark');
+            var fullWidth = (props.attributes.fullWidth == true ? 'container-fluid' : 'container');
+            var blockShadow = (props.attributes.blockShadow == true ? 'noshadow' : 'has-shadow');
+            var blockMark = (props.attributes.doubleoptin == true ? 'addmark' : 'nomark');
+            var negativeBlock = (props.attributes.fullWidth == true ? 'negative' : '');
             var blockPaddings = (props.attributes.paddingBlock == true ? 'addpadding' : 'nopadding');
             var BottomPaddingBlock = (props.attributes.BottomPaddingBlock == true ? 'b-p' : 'b-n');
 
@@ -69,6 +77,7 @@
                         el(PanelColorSettings,
                             {
                                 title: 'Blok kleur',
+                                initialOpen: false,
                                 colorSettings: [
                                     {
                                         colors: colorSamples,
@@ -78,8 +87,17 @@
                                     }
                                 ]
                             },
+                            el(ToggleControl,
+                                {
+                                    label: 'Verwijder schaduw',
+                                    onChange: (value) => {
+                                        props.setAttributes({ blockShadow: value });
+                                    },
+                                    checked: props.attributes.blockShadow,
+                                }
+                            ),
                         ),
-                        el(PanelBody, { title: 'Section opties', initialOpen: true },
+                        el(PanelBody, { title: 'Section opties', initialOpen: false },
                             el(PanelRow, {},
                                 el(ToggleControl,
                                     {
@@ -112,11 +130,35 @@
                                         checked: props.attributes.BottomPaddingBlock,
                                     }
                                 ),
+                            ),
+                            el(PanelRow, {},
+                                el(ToggleControl,
+                                    {
+                                        label: 'Plaats onder wit blok',
+                                        onChange: (value) => {
+                                            props.setAttributes({ negativeBlock: value });
+                                        },
+                                        checked: props.attributes.negativeBlock,
+                                    }
+                                ),
                             )
+                        ),
+                        el(PanelBody, { title: 'Volledige breedte', initialOpen: false },
+                            el(PanelRow, {},
+                                el(ToggleControl,
+                                    {
+                                        label: 'Maak volledige breedte',
+                                        onChange: (value) => {
+                                            props.setAttributes({ fullWidth: value });
+                                        },
+                                        checked: props.attributes.fullWidth,
+                                    }
+                                ),
+                            ),
                         )
                     ),
 
-                    el('div', { className: blockClasses + ' ' + blockShadow + ' ' + blockPaddings + ' ' + BottomPaddingBlock, style: blockStyles },
+                    el('div', { className: blockClasses + ' ' + blockShadow + ' ' + negativeBlock + ' ' + fullWidth + ' ' + blockPaddings + ' ' + BottomPaddingBlock, style: blockStyles },
                         el('div', { className: 'blockwrap' },
                             el(InnerBlocks)
                         )
@@ -128,9 +170,11 @@
         save: function (props) {
 
             var blockClass = getColorClassName('block-color', props.attributes.blockColor);
-
             var blockClasses = blockClass;
-            var blockShadow = (props.attributes.doubleoptin == true ? 'addmark' : 'nomark');
+            var negativeBlock = (props.attributes.fullWidth == true ? 'negative' : '');
+            var fullWidth = (props.attributes.fullWidth == true ? 'container-fluid' : 'container');
+            var blockShadow = (props.attributes.blockShadow == true ? 'noshadow' : 'has-shadow');
+            var blockMark = (props.attributes.doubleoptin == true ? 'addmark' : 'nomark');
             var blockPaddings = (props.attributes.paddingBlock == true ? 'addpadding' : 'nopadding');
             var BottomPaddingBlock = (props.attributes.BottomPaddingBlock == true ? 'b-p' : 'b-n');
 
@@ -139,7 +183,7 @@
             };
 
             return (
-                el('div', { className: blockClasses + ' ' + blockShadow + ' ' + blockPaddings + ' ' + BottomPaddingBlock, style: blockStyles },
+                el('div', { className: blockClasses + ' ' + blockMark + ' ' + fullWidth + ' ' + negativeBlock + ' ' + blockShadow + ' ' + blockPaddings + ' ' + BottomPaddingBlock, style: blockStyles },
                     el(InnerBlocks.Content, null)
                 )
             );
@@ -151,3 +195,15 @@
     window.wp.element,
     window.wp.components,
 );
+
+
+
+
+
+
+
+
+wp.blocks.registerBlockStyle( 'core/image', {
+    name: 'delete-edge',
+    label: 'Verwijder randen'
+} );
