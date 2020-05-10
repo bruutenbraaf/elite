@@ -62,7 +62,7 @@
             var fullWidth = (props.attributes.fullWidth == true ? 'container-fluid' : 'container');
             var blockShadow = (props.attributes.blockShadow == true ? 'noshadow' : 'has-shadow');
             var blockMark = (props.attributes.doubleoptin == true ? 'addmark' : 'nomark');
-            var negativeBlock = (props.attributes.fullWidth == true ? 'negative' : '');
+            var negativeBlock = (props.attributes.negativeBlock == true ? 'negative' : '');
             var blockPaddings = (props.attributes.paddingBlock == true ? 'addpadding' : 'nopadding');
             var BottomPaddingBlock = (props.attributes.BottomPaddingBlock == true ? 'b-p' : 'b-n');
 
@@ -171,7 +171,7 @@
 
             var blockClass = getColorClassName('block-color', props.attributes.blockColor);
             var blockClasses = blockClass;
-            var negativeBlock = (props.attributes.fullWidth == true ? 'negative' : '');
+            var negativeBlock = (props.attributes.negativeBlock == true ? 'negative' : 'positive');
             var fullWidth = (props.attributes.fullWidth == true ? 'container-fluid' : 'container');
             var blockShadow = (props.attributes.blockShadow == true ? 'noshadow' : 'has-shadow');
             var blockMark = (props.attributes.doubleoptin == true ? 'addmark' : 'nomark');
