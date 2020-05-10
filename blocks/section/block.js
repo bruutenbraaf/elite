@@ -59,10 +59,11 @@
         edit: withColors('blockColor')(function (props) {
 
             var blockClasses = ((props.blockColor.class || '') + ' ' + props.className).trim();
-            var fullWidth = (props.attributes.fullWidth == true ? 'container-fluid' : 'container');
+            var negativeBlock = (props.attributes.negativeBlock == true ? 'negative' : 'positive');
+            var fullWidth = (props.attributes.fullWidth == true ? '' : 'container');
+            var fullWidthCol = (props.attributes.fullWidth == true ? 'container' : 'container-fluid');
             var blockShadow = (props.attributes.blockShadow == true ? 'noshadow' : 'has-shadow');
             var blockMark = (props.attributes.doubleoptin == true ? 'addmark' : 'nomark');
-            var negativeBlock = (props.attributes.negativeBlock == true ? 'negative' : '');
             var blockPaddings = (props.attributes.paddingBlock == true ? 'addpadding' : 'nopadding');
             var BottomPaddingBlock = (props.attributes.BottomPaddingBlock == true ? 'b-p' : 'b-n');
 
@@ -172,7 +173,8 @@
             var blockClass = getColorClassName('block-color', props.attributes.blockColor);
             var blockClasses = blockClass;
             var negativeBlock = (props.attributes.negativeBlock == true ? 'negative' : 'positive');
-            var fullWidth = (props.attributes.fullWidth == true ? 'container-fluid' : 'container');
+            var fullWidth = (props.attributes.fullWidth == true ? '' : 'container');
+            var fullWidthCol = (props.attributes.fullWidth == true ? 'container' : 'container-fluid');
             var blockShadow = (props.attributes.blockShadow == true ? 'noshadow' : 'has-shadow');
             var blockMark = (props.attributes.doubleoptin == true ? 'addmark' : 'nomark');
             var blockPaddings = (props.attributes.paddingBlock == true ? 'addpadding' : 'nopadding');
@@ -184,7 +186,9 @@
 
             return (
                 el('div', { className: blockClasses + ' ' + blockMark + ' ' + fullWidth + ' ' + negativeBlock + ' ' + blockShadow + ' ' + blockPaddings + ' ' + BottomPaddingBlock, style: blockStyles },
-                    el(InnerBlocks.Content, null)
+                    el('div', { className: fullWidthCol },
+                        el(InnerBlocks.Content, null)
+                    )
                 )
             );
         },
@@ -203,7 +207,7 @@
 
 
 
-wp.blocks.registerBlockStyle( 'core/image', {
+wp.blocks.registerBlockStyle('core/image', {
     name: 'delete-edge',
     label: 'Verwijder randen'
-} );
+});
