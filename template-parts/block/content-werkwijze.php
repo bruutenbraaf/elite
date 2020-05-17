@@ -34,7 +34,7 @@ if (!empty($block['align'])) {
 </style>
 
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classes); ?>">
-    <div class="d-flex stappen">
+    <div class="d-flex stappen flex-wrap flex-md-nowrap">
         <?php if (have_rows('werkwijze')) : ?>
             <?php while (have_rows('werkwijze')) : the_row(); ?>
                 <?php if (have_rows('stap')) : ?>

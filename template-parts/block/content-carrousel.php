@@ -44,7 +44,7 @@ if (!empty($block['align'])) {
                             <div class="items d-flex flex-wrap">
                                 <?php if (have_rows('dienst')) : ?>
                                     <?php while (have_rows('dienst')) : the_row(); ?>
-                                        <div class="col-6 item">
+                                        <div class="col-md-6 col-12 item">
                                             <?php the_sub_field('dienst_content'); ?>
                                         </div>
                                     <?php endwhile; ?>
@@ -87,6 +87,7 @@ if (!empty($block['align'])) {
             slidesToScroll: 1,
             autoPlay: false,
             accessibility: false,
+            adaptiveHeight: true,
             prevArrow: jQuery('.prev-slide'),
             nextArrow: jQuery('.next-slide'),
         });

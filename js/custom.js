@@ -106,49 +106,9 @@ jQuery(window).scroll(function (event) {
 });
 
 
-// Mega
-jQuery("body").on('click', '.mtgo', function () {
-  jQuery(this).toggleClass('h--open');
-  jQuery('.mgm').toggleClass('clickable');
-  jQuery('.l').animate({ 'height': 'toggle' }, 400);
-  jQuery('.r').animate({ 'width': 'toggle' }, 400);
-  jQuery('.mgm .le').toggleClass('op');
-  jQuery('.mgm .ri').toggleClass('op-r');
-  jQuery('.news-nav').toggleClass('is--v');
-  jQuery('.mgm--nav li').toggleClass('is--shown');
-  jQuery('nav').toggleClass('mgm--open');
-});
-
 // Hamburger menu
-jQuery("body").on('click', '.hamburger', function () {
-  jQuery('.mobile-nav-fs').toggleClass('is_visible');
-  jQuery('nav').toggleClass('mobile_is_visible');
-  jQuery('.hamburger').toggleClass('is__open');
-  jQuery('.mobile-nav-fs ul li a').toggleClass('show__me');
-});
-
-jQuery("body").on('click', '.mobile-nav-fs .menu-item-has-children', function () {
-  jQuery(this).find('.sub-menu').slideToggle();
-});
-
-
-// Smooth scroll to anchor 
-
-jQuery('a[href*=\\#]').on('click', function (event) {
-  target = jQuery(this).attr('href');
-  if (target === '#') {
-    event.preventDefault();
-    return;
-  } else if (target.slice(0, 1) === '#') {
-    event.preventDefault();
-    jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top }, 1000);
-  }
-});
-
-
-jQuery(".dwn").click(function () {
-  var cls = jQuery(this).closest("section").next().offset().top + -100;
-  jQuery("html, body").animate({ scrollTop: cls }, "slow");
+jQuery("body").on('click', '.hamburger, .close-nav', function () {
+  jQuery('.mobile-nav').toggleClass('open');
 });
 
 

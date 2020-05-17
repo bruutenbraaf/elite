@@ -35,7 +35,7 @@ if (!empty($block['align'])) {
             <div class="container">
                 <div class="row d-flex align-content-between flex-wrap">
                     <div class="col-md-12 c-content">
-                        <div class="b-g d-flex justify-content-between align-items-center">
+                        <div class="b-g d-flex justify-content-between align-items-center flex-wrap flex-md-nowrap">
                             <span><?php the_sub_field('titel'); ?></span>
                             <?php $knop = get_sub_field('knop'); ?>
                             <?php if ($knop) { ?>

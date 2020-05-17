@@ -1,7 +1,7 @@
 <footer>
     <div class="container">
-        <div class="d-flex justify-content-between">
-            <div class="col-4">
+        <div class="d-flex justify-content-between flex-wrap">
+            <div class="col-md-4">
                 <?php the_field('korte_over_ons', 'option'); ?>
                 <div class="c-con">
                     <a class="tel" href="tel:<?php the_field('telefoonnummer', 'option'); ?>">
@@ -43,10 +43,10 @@
                     </a>
                 </div>
             </div>
-            <div>
+            <div class="col-12 col-md offset-md-1 footer-nav">
                 <?php wp_nav_menu(array('theme_location' => 'main_menu')); ?>
             </div>
-            <div>
+            <div class="col-12 col-md footer-nav">
                 <?php wp_nav_menu(array('theme_location' => 'extra_menu')); ?>
             </div>
         </div>

@@ -53,5 +53,5 @@ if (!empty($block['align'])) {
             </div>
             <div class="container">
                 <div class="row">
-        <?php endwhile; ?>
-    <?php endif; ?>
+                <?php endwhile; ?>
+            <?php endif; ?>
