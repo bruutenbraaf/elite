@@ -1205,6 +1205,9 @@ footer {
         width: 200px;
         height: 80px;
     }
+    .block-pricespackages {
+        margin-left: inherit;
+    }
     .main-navigation {
         display: none;
     }
@@ -1344,6 +1347,11 @@ footer {
     }
     .stap:last-child:after {
         display: none;
+    }
+    .usps {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
     }
 }
 

@@ -1018,6 +1018,9 @@ footer {
     width: 200px;
     height: 80px; }
 
+  .block-pricespackages {
+    margin-left: inherit; }
+
   .main-navigation {
     display: none; }
 
@@ -1141,7 +1144,12 @@ footer {
     display: none; }
 
   .stap:last-child:after {
-    display: none; } }
+    display: none; }
+
+  .usps {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1; } }
 @media screen and (max-width: 575px) {
   .block-pricespackagespreview .btn {
     top: initial; }
