@@ -875,6 +875,7 @@ footer {
         right: 0px;
         top: 0px;
         z-index: -1;
+        height: 100%;
         border-top: 25px solid transparent;
         border-left: 50px solid rgba(#ededed, 0.9);
         border-bottom: 100vw solid rgba(#ededed, 0.9);
@@ -1230,6 +1231,9 @@ footer {
 }
 
 @media screen and (max-width: 991px) {
+    .wp-block-quote {
+        min-width: initial;
+    }
     .wp-block-columns {
         flex-wrap: wrap;
     }
@@ -1338,6 +1342,12 @@ footer {
     .block-pricespackagespreview .btn {
         top: initial;
     }
+    h2 {
+        font-size: 2.4rem;
+        letter-spacing: -.19px;
+        line-height: initial;
+        margin-bottom: 1.4rem !important;
+    }
     nav {
         width: 100%;
     }
@@ -1367,7 +1377,7 @@ footer {
         margin: 0px 15px;
     }
     .call-out .c-content span {
-        font-size: 2.3rem;
+        font-size: 1.8rem;
         line-height: initial;
         margin-bottom: 15px;
     }
@@ -1383,5 +1393,27 @@ footer {
         padding: 60px 30px;
         margin-left: 15px;
         width: calc(100% - 30px);
+    }
+    .negative {
+        padding-top: 160px !important;
+        padding-bottom: 200px !important;
+        margin-left: 0px !important;
+        width: calc(100%) !important;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .carrousel-container .prev-slide {
+        left: -24px;
+        transition: ease-in-out 0.2s;
+    }
+    .carrousel-container .prev-slide:hover {
+        left: 0px;
+    }
+    .carrousel-container .next-slide {
+        right: -24px;
+        transition: ease-in-out 0.2s;
+    }
+    .carrousel-container .next-slide:hover {
+        right: -24px;
     }
 }

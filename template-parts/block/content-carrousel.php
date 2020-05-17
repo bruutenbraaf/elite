@@ -86,8 +86,7 @@ if (!empty($block['align'])) {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoPlay: false,
-            accessibility: false,
-            adaptiveHeight: true,
+            accessibility: true,
             prevArrow: jQuery('.prev-slide'),
             nextArrow: jQuery('.next-slide'),
         });
