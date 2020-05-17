@@ -1010,11 +1010,20 @@ footer {
   display: flex; }
 
 @media screen and (max-width: 1080px) {
+  .p-header {
+    margin-right: 32px; }
+
+  .p-header:after,
+  .h-header:after {
+    width: 200px;
+    height: 80px; }
+
   .main-navigation {
     display: none; }
 
   nav {
-    width: calc(100% - 32px); }
+    width: calc(100% - 32px);
+    top: 64px; }
 
   nav .hamburger {
     right: 40px;
@@ -1139,7 +1148,7 @@ footer {
 
   h2 {
     font-size: 2.4rem;
-    letter-spacing: -.19px;
+    letter-spacing: -0.19px;
     line-height: initial;
     margin-bottom: 1.4rem !important; }
 
