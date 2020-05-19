@@ -111,6 +111,12 @@ jQuery("body").on('click', '.hamburger, .close-nav', function () {
   jQuery('.mobile-nav').toggleClass('open');
 });
 
+jQuery("body").on('click', '.mobile-nav .menu-item-has-children', function () {
+  jQuery(this).find('.sub-menu').slideToggle(300);
+  jQuery(this).toggleClass('active');
+});
+
+
 
 
 jQuery(".wp-block-group").addClass("container");
