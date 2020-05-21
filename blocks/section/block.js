@@ -240,10 +240,11 @@
 
             var blockStyles = {
                 backgroundColor: blockClass ? undefined : props.attributes.customBlockColor,
+                backgroundImage: 'url(' + attributes.mediaURL + ')',
             };
 
             return (
-                el('div', { className: blockClasses + ' ' + blockMark + ' ' + fullWidth + ' ' + negativeBlock + ' ' + blockShadow + ' ' + blockPaddings + ' ' + BottomPaddingBlock, style: { backgroundImage: 'url(' + attributes.mediaURL + ')' }, blockStyles },
+                el('div', { className: blockClasses + ' ' + blockMark + ' ' + fullWidth + ' ' + negativeBlock + ' ' + blockShadow + ' ' + blockPaddings + ' ' + BottomPaddingBlock, style: blockStyles },
                     el('div', { className: fullWidthCol },
                         el(InnerBlocks.Content, null)
                     )
