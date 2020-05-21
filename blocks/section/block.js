@@ -1,9 +1,16 @@
-(function (blocks, editor, element, components) {
+(function (blocks, editor, components, i18n, element) {
 
-    const el = element.createElement;
-    const InnerBlocks = editor.InnerBlocks;
-    const { registerBlockType } = blocks;
-    const { InspectorControls, withColors, PanelColorSettings, getColorClassName } = editor;
+
+    var el = element.createElement;
+    var registerBlockType = wp.blocks.registerBlockType;
+    var RichText = wp.editor.RichText;
+    var BlockControls = wp.editor.BlockControls;
+    var AlignmentToolbar = wp.editor.AlignmentToolbar;
+    var MediaUpload = wp.editor.MediaUpload;
+    var InspectorControls = wp.editor.InspectorControls;
+    var InnerBlocks = editor.InnerBlocks;
+
+    const { withColors, PanelColorSettings, getColorClassName } = editor;
     const { Fragment } = element;
     const { TextControl, ToggleControl, Panel, PanelBody, PanelRow } = components;
     const iconBlock = el('svg', { width: 24, height: 24 },
@@ -52,11 +59,37 @@
             },
             BottomPaddingBlock: {
                 type: 'boolean' // for ToggleControl we need boolean type
+            },
+            mediaID: {
+                type: 'number'
+            },
+            mediaURL: {
+                type: 'string',
+                source: 'attribute',
+                selector: 'img',
+                attribute: 'src'
+            },
+            alignment: {
+                type: 'string',
+                default: 'center'
             }
         },
 
 
         edit: withColors('blockColor')(function (props) {
+
+            var attributes = props.attributes
+            var alignment = props.attributes.alignment
+            var onSelectImage = function (media) {
+                return props.setAttributes({
+                    mediaURL: media.url,
+                    mediaID: media.id
+                })
+            }
+
+            function onChangeAlignment(newAlignment) {
+                props.setAttributes({ alignment: newAlignment })
+            }
 
             var blockClasses = ((props.blockColor.class || '') + ' ' + props.className).trim();
             var negativeBlock = (props.attributes.negativeBlock == true ? 'negative' : 'positive');
@@ -158,18 +191,43 @@
                             ),
                         )
                     ),
+                    el(BlockControls, { key: 'controls' }, // Display controls when the block is clicked on.
+                        el('div', { className: 'components-toolbar' },
+                            el(MediaUpload, {
+                                onSelect: onSelectImage,
+                                type: 'image',
+                                render: function (obj) {
+                                    return el(components.Button, {
+                                        className: 'components-icon-button components-toolbar__control',
+                                        onClick: obj.open
+                                    },
+                                        // Add Dashicon for media upload button.
+                                        el('svg', { className: 'dashicon dashicons-edit', width: '20', height: '20' },
+                                            el('path', { d: 'M2.25 1h15.5c.69 0 1.25.56 1.25 1.25v15.5c0 .69-.56 1.25-1.25 1.25H2.25C1.56 19 1 18.44 1 17.75V2.25C1 1.56 1.56 1 2.25 1zM17 17V3H3v14h14zM10 6c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2zm3 5s0-6 3-6v10c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1V8c2 0 3 4 3 4s1-3 3-3 3 2 3 2z' })
+                                        ))
+                                }
+                            })
+                        ),
+                        // Display alignment toolbar within block controls.
+                        el(AlignmentToolbar, {
+                            value: alignment,
+                            onChange: onChangeAlignment
+                        })
+                    ),
 
                     el('div', { className: blockClasses + ' ' + blockShadow + ' ' + negativeBlock + ' ' + fullWidth + ' ' + blockPaddings + ' ' + BottomPaddingBlock, style: blockStyles },
                         el('div', { className: 'blockwrap' },
                             el(InnerBlocks)
                         )
-                    )
+                    ),
                 )
             );
         }),
 
         save: function (props) {
 
+            var attributes = props.attributes
+            var alignment = props.attributes.alignment
             var blockClass = getColorClassName('block-color', props.attributes.blockColor);
             var blockClasses = blockClass;
             var negativeBlock = (props.attributes.negativeBlock == true ? 'negative' : 'positive');
@@ -185,7 +243,7 @@
             };
 
             return (
-                el('div', { className: blockClasses + ' ' + blockMark + ' ' + fullWidth + ' ' + negativeBlock + ' ' + blockShadow + ' ' + blockPaddings + ' ' + BottomPaddingBlock, style: blockStyles },
+                el('div', { className: blockClasses + ' ' + blockMark + ' ' + fullWidth + ' ' + negativeBlock + ' ' + blockShadow + ' ' + blockPaddings + ' ' + BottomPaddingBlock, style: { backgroundImage: 'url(' + attributes.mediaURL + ')' }, blockStyles },
                     el('div', { className: fullWidthCol },
                         el(InnerBlocks.Content, null)
                     )
@@ -196,8 +254,9 @@
 })(
     window.wp.blocks,
     window.wp.editor,
-    window.wp.element,
     window.wp.components,
+    window.wp.i18n,
+    window.wp.element
 );
 
 

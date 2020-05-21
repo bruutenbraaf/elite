@@ -400,8 +400,9 @@ function content_gutenberg_block()
 	wp_register_script(
 		'wp-section-block-script',
 		WP_BLOCKS_URL . 'section/block.js',
-		array('wp-blocks', 'wp-element', 'wp-editor'),
-		$version
+		array( 'wp-blocks', 'wp-components', 'wp-element', 'wp-i18n', 'wp-editor' ), 
+		$version,
+		true
 	);
 
 	//Register block
