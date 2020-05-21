@@ -91,7 +91,7 @@
                 props.setAttributes({ alignment: newAlignment })
             }
 
-            var blockClasses = ((props.blockColor.class || '') + ' ' + props.className).trim();
+            var blockClass = ((props.blockColor.class || '') + ' ' + props.className).trim();
             var negativeBlock = (props.attributes.negativeBlock == true ? 'negative' : 'positive');
             var fullWidth = (props.attributes.fullWidth == true ? '' : 'container');
             var fullWidthCol = (props.attributes.fullWidth == true ? 'container' : 'container-fluid');
@@ -99,10 +99,11 @@
             var blockMark = (props.attributes.doubleoptin == true ? 'addmark' : 'nomark');
             var blockPaddings = (props.attributes.paddingBlock == true ? 'addpadding' : 'nopadding');
             var BottomPaddingBlock = (props.attributes.BottomPaddingBlock == true ? 'b-p' : 'b-n');
+            var ImageUrl = attributes.mediaURL;
 
-            var blockStyles = {
-                backgroundColor: props.blockColor.class ? undefined : props.attributes.customBlockColor,
-            };
+            if (ImageUrl) {
+                var bg = { backgroundImage: 'url(' + ImageUrl + ')' }
+            }
 
             return (
                 el(Fragment, {},
@@ -215,7 +216,7 @@
                         })
                     ),
 
-                    el('div', { className: blockClasses + ' ' + blockShadow + ' ' + negativeBlock + ' ' + fullWidth + ' ' + blockPaddings + ' ' + BottomPaddingBlock, style: blockStyles },
+                    el('div', { className: blockClass + ' ' + negativeBlock + ' ' + fullWidth + ' ' + blockShadow + ' ' + blockMark + ' ' + blockPaddings + ' ' + BottomPaddingBlock, style: bg },
                         el('div', { className: 'blockwrap' },
                             el(InnerBlocks)
                         )
@@ -229,7 +230,6 @@
             var attributes = props.attributes
             var alignment = props.attributes.alignment
             var blockClass = getColorClassName('block-color', props.attributes.blockColor);
-            var blockClasses = blockClass;
             var negativeBlock = (props.attributes.negativeBlock == true ? 'negative' : 'positive');
             var fullWidth = (props.attributes.fullWidth == true ? '' : 'container');
             var fullWidthCol = (props.attributes.fullWidth == true ? 'container' : 'container-fluid');
@@ -237,14 +237,14 @@
             var blockMark = (props.attributes.doubleoptin == true ? 'addmark' : 'nomark');
             var blockPaddings = (props.attributes.paddingBlock == true ? 'addpadding' : 'nopadding');
             var BottomPaddingBlock = (props.attributes.BottomPaddingBlock == true ? 'b-p' : 'b-n');
+            var ImageUrl = attributes.mediaURL;
 
-            var blockStyles = {
-                backgroundColor: blockClass ? undefined : props.attributes.customBlockColor,
-                backgroundImage: 'url(' + attributes.mediaURL + ')',
-            };
+            if (ImageUrl) {
+                var bg = { backgroundImage: 'url(' + ImageUrl + ')' }
+            }
 
             return (
-                el('div', { className: blockClasses + ' ' + blockMark + ' ' + fullWidth + ' ' + negativeBlock + ' ' + blockShadow + ' ' + blockPaddings + ' ' + BottomPaddingBlock, style: blockStyles },
+                el('div', { className: blockClass + ' ' + negativeBlock + ' ' + fullWidth + ' ' + blockShadow + ' ' + blockMark + ' ' + blockPaddings + ' ' + BottomPaddingBlock + ' ', style: bg},
                     el('div', { className: fullWidthCol },
                         el(InnerBlocks.Content, null)
                     )
