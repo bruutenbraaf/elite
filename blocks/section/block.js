@@ -32,8 +32,8 @@
             color: '#ffffff'
         },
         {
-            name: 'Grey',
-            slug: 'blue',
+            name: 'Grayy',
+            slug: 'gray',
             color: '#F3F3F3'
         }
     ];
