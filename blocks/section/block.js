@@ -12,12 +12,7 @@
     const removeBackgroundImage = () => props.setAttributes({ backgroundUrl: null });
     const { withColors, PanelColorSettings, getColorClassName } = editor;
     const { Fragment } = element;
-    const { TextControl, ToggleControl, RadioControl, Button, Panel, PanelBody, PanelRow } = components;
-    const MyButton = () => (
-        <Button isSecondary>
-            Click me!
-        </Button>
-    );
+    const { TextControl, ToggleControl, Panel, PanelBody, PanelRow } = components;
     const iconBlock = el('svg', { width: 24, height: 24 },
         el('path',
             {
@@ -193,14 +188,6 @@
                                             props.setAttributes({ fullWidth: value });
                                         },
                                         checked: props.attributes.fullWidth,
-                                    }
-                                ),
-                            ),
-                        ),
-                        el(PanelBody, { title: 'Volledige button', initialOpen: false },
-                            el(PanelRow, {},
-                                el(Button,
-                                    {
                                     }
                                 ),
                             ),
