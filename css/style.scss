@@ -281,8 +281,22 @@ nav {
                     pointer-events: all;
                 }
             }
-            .current-menu-item {
-                a {
+            .current-menu-item,
+            .current_page_ancestor {
+                > a {
+                    &:after {
+                        content: "";
+                        bottom: -8px;
+                        left: 0px;
+                        position: absolute;
+                        width: 100%;
+                        height: 3px;
+                        background: #ffffff;
+                    }
+                }
+            }
+            .current_page_item {
+                > a {
                     &:after {
                         content: "";
                         bottom: -8px;
