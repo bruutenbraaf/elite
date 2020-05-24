@@ -9,10 +9,15 @@
     var MediaUpload = wp.editor.MediaUpload;
     var InspectorControls = wp.editor.InspectorControls;
     var InnerBlocks = editor.InnerBlocks;
-
+    const removeBackgroundImage = () => props.setAttributes({ backgroundUrl: null });
     const { withColors, PanelColorSettings, getColorClassName } = editor;
     const { Fragment } = element;
-    const { TextControl, ToggleControl, Panel, PanelBody, PanelRow } = components;
+    const { TextControl, ToggleControl, RadioControl, Button, Panel, PanelBody, PanelRow } = components;
+    const MyButton = () => (
+        <Button isSecondary>
+            Click me!
+        </Button>
+    );
     const iconBlock = el('svg', { width: 24, height: 24 },
         el('path',
             {
@@ -104,6 +109,7 @@
             if (ImageUrl) {
                 var bg = { backgroundImage: 'url(' + ImageUrl + ')' }
             }
+            var blockStyles = { backgroundColor: props.blockColor.class ? undefined : props.attributes.customBlockColor };
 
             return (
                 el(Fragment, {},
@@ -190,7 +196,15 @@
                                     }
                                 ),
                             ),
-                        )
+                        ),
+                        el(PanelBody, { title: 'Volledige button', initialOpen: false },
+                            el(PanelRow, {},
+                                el(Button,
+                                    {
+                                    }
+                                ),
+                            ),
+                        ),
                     ),
                     el(BlockControls, { key: 'controls' }, // Display controls when the block is clicked on.
                         el('div', { className: 'components-toolbar' },
@@ -216,7 +230,14 @@
                         })
                     ),
 
-                    el('div', { className: blockClass + ' ' + negativeBlock + ' ' + fullWidth + ' ' + blockShadow + ' ' + blockMark + ' ' + blockPaddings + ' ' + BottomPaddingBlock, style: bg },
+                    el('div', {
+                        className: blockClass + ' ' + negativeBlock + ' ' + fullWidth + ' ' + blockShadow + ' ' + blockMark + ' ' + blockPaddings + ' ' + BottomPaddingBlock,
+                        style: {
+                            backgroundImage: 'url(' + ImageUrl + ')',
+                            backgroundColor: props.blockColor.class ? undefined : props.attributes.customBlockColor,
+
+                        }
+                    },
                         el('div', { className: 'blockwrap' },
                             el(InnerBlocks)
                         )
@@ -244,7 +265,13 @@
             }
 
             return (
-                el('div', { className: blockClass + ' ' + negativeBlock + ' ' + fullWidth + ' ' + blockShadow + ' ' + blockMark + ' ' + blockPaddings + ' ' + BottomPaddingBlock + ' ', style: bg},
+                el('div', {
+                    className: blockClass + ' ' + negativeBlock + ' ' + fullWidth + ' ' + blockShadow + ' ' + blockMark + ' ' + blockPaddings + ' ' + BottomPaddingBlock + ' ', style: {
+                        backgroundColor: attributes.blockColor ? undefined : attributes.customBlockColor,
+                        backgroundImage: 'url(' + ImageUrl + ')'
+                    }
+
+                },
                     el('div', { className: fullWidthCol },
                         el(InnerBlocks.Content, null)
                     )
