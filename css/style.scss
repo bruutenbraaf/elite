@@ -35,6 +35,12 @@ $paragraphColor: #252525;
 body {
 }
 
+.wp-block-columns {
+    flex-wrap: nowrap;
+    width: 100%;
+    display: flex;
+}
+
 h2 {
     font-family: $karmillaBold;
     font-size: 3rem;

@@ -13,6 +13,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.wp-block-columns {
+  flex-wrap: nowrap;
+  width: 100%;
+  display: flex; }
+
 h2 {
   font-family: "Karmilla-Bold", Arial, sans-serif;
   font-size: 3rem;
