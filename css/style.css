@@ -163,7 +163,8 @@ nav {
   background: rgba(72, 92, 199, 0); }
   nav .container .row {
     margin-left: 0px;
-    margin-right: -32px; }
+    margin-right: -32px;
+    height: 106px; }
   nav .main-navigation ul {
     margin: 0;
     padding: 0;
@@ -500,6 +501,10 @@ nav {
 
 .nav--change {
   top: 0px; }
+  .nav--change .container .row {
+    margin-left: 0px;
+    margin-right: -32px;
+    height: 70px; }
   .nav--change .main-navigation ul li a {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0); }
 
@@ -508,13 +513,14 @@ nav {
 
 .elix {
   position: relative;
-  top: 0px;
   width: 171px;
   height: 106px; }
 
 .elixcanged {
-  top: 15px;
-  width: 120px; }
+  height: 70px;
+  position: relative;
+  left: -20px;
+  top: 14px; }
 
 .running-your-energy {
   opacity: 1; }

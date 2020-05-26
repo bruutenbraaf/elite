@@ -200,6 +200,7 @@ nav {
         .row {
             margin-left: 0px;
             margin-right: -32px;
+            height: 106px;
         }
     }
     .main-navigation {
@@ -567,6 +568,13 @@ nav {
 
 .nav--change {
     top: 0px;
+    .container {
+        .row {
+            margin-left: 0px;
+            margin-right: -32px;
+            height: 70px;
+        }
+    }
     .main-navigation {
         ul {
             li {
@@ -584,14 +592,15 @@ nav {
 
 .elix {
     position: relative;
-    top: 0px;
     width: 171px;
     height: 106px;
 }
 
 .elixcanged {
-    top: 15px;
-    width: 120px;
+    height: 70px;
+    position: relative;
+    left: -20px;
+    top: 14px;
 }
 
 .running-your-energy {
