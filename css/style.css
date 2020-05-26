@@ -1178,8 +1178,14 @@ footer {
     display: none; }
 
   nav {
-    width: calc(100% - 32px);
+    width: 100%;
     top: 64px; }
+    nav .container {
+      padding: 0; }
+      nav .container .branding {
+        margin-left: -10px; }
+      nav .container .hamburger {
+        margin-right: -8px; }
 
   nav .hamburger {
     right: 40px;

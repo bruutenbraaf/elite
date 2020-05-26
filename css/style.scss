@@ -1409,8 +1409,17 @@ footer {
         display: none;
     }
     nav {
-        width: calc(100% - 32px);
+        width: 100%;
         top: 64px;
+        .container {
+            padding:0;
+            .branding {
+                margin-left: -10px;
+            }
+            .hamburger {
+                margin-right: -8px;
+            }
+        }
     }
     nav .hamburger {
         right: 40px;
