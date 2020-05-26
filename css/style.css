@@ -239,8 +239,7 @@ nav {
         nav .main-navigation ul .menu-item-has-children .sub-menu li {
           white-space: nowrap;
           display: block;
-          width: 100%;
-          padding: 5px 24px; }
+          width: 100%; }
           nav .main-navigation ul .menu-item-has-children .sub-menu li a {
             transition-property: none;
             text-shadow: none; }
