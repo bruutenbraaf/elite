@@ -13,6 +13,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+body {
+  font-size: 1.125rem;
+  font-family: "Karmilla-Regular", Arial, sans-serif;
+  font-size: 1.125rem;
+  color: #252525;
+  letter-spacing: -0.07px;
+  line-height: 31px; }
+
 .wp-block-columns {
   flex-wrap: nowrap;
   width: 100%;
@@ -38,7 +46,8 @@ p {
   font-size: 1.125rem;
   color: #252525;
   letter-spacing: -0.07px;
-  line-height: 31px; }
+  line-height: 31px;
+  margin-bottom: 2rem; }
   p a {
     color: #485cc7;
     text-decoration: underline; }
@@ -658,7 +667,7 @@ footer {
       footer ul li a {
         opacity: 0.7;
         font-family: "Karmilla-Regular", Arial, sans-serif;
-        font-size: 18px;
+        font-size: 1.125rem;
         color: #252525;
         letter-spacing: -0.07px;
         line-height: 38px; }
@@ -669,14 +678,14 @@ footer {
   footer p {
     opacity: 0.7;
     font-family: "Karmilla-Regular", Arial, sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: #252525;
     letter-spacing: -0.07px;
     line-height: 38px; }
   footer a {
     opacity: 0.7;
     font-family: "Karmilla-Regular", Arial, sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: #252525;
     letter-spacing: -0.07px;
     line-height: 38px;
@@ -981,7 +990,7 @@ footer {
         background: #ffffff;
         font-family: "Karmilla-Regular", Arial, sans-serif;
         padding: 10px;
-        font-size: 18px;
+        font-size: 1.125rem;
         color: #252525;
         letter-spacing: -0.07px;
         text-align: center;
@@ -1046,7 +1055,7 @@ footer {
       line-height: 31px; }
     .carrousel-container .carrousel-items .items .item p {
       font-family: "Karmilla-Regular", Arial, sans-serif;
-      font-size: 18px;
+      font-size: 1.125rem;
       color: #252525;
       letter-spacing: -0.07px;
       line-height: 31px; }

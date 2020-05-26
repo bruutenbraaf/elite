@@ -18,9 +18,13 @@
 $karmilla: "Karmilla-Regular", Arial, sans-serif;
 $karmillaBold: "Karmilla-Bold", Arial, sans-serif;
 
+// Font Sizes
+$defaultFontSize: 1.125rem;
+
 // colors
 $mainColor: #485cc7;
 $paragraphColor: #252525;
+
 
 // body
 
@@ -33,6 +37,12 @@ $paragraphColor: #252525;
 }
 
 body {
+    font-size: $defaultFontSize;
+    font-family: $karmilla;
+    font-size: $defaultFontSize;
+    color: $paragraphColor;;
+    letter-spacing: -0.07px;
+    line-height: 31px;
 }
 
 .wp-block-columns {
@@ -60,10 +70,11 @@ h3 {
 
 p {
     font-family: $karmilla;
-    font-size: 1.125rem;
-    color: #252525;
+    font-size: $defaultFontSize;
+    color: $paragraphColor;;
     letter-spacing: -0.07px;
     line-height: 31px;
+    margin-bottom: 2rem;
     a {
         color: $mainColor;
         text-decoration: underline;
@@ -91,7 +102,7 @@ a {
         color: #ffffff;
         li {
             font-family: $karmilla;
-            font-size: 1.125rem;
+            font-size: $defaultFontSize;
             color: #ffffff;
             letter-spacing: -0.07px;
             line-height: 31px;
@@ -113,7 +124,7 @@ a {
 .wp-block-button a.wp-block-button__link,
 .has-blue-block-color .wp-block-buttons .wp-block-button__link {
     font-family: $karmillaBold;
-    font-size: 1.125rem;
+    font-size: $defaultFontSize;
     color: #ffffff;
     letter-spacing: -0.08px;
     border-radius: 0px;
@@ -764,8 +775,8 @@ footer {
             a {
                 opacity: 0.7;
                 font-family: $karmilla;
-                font-size: 18px;
-                color: #252525;
+                font-size: $defaultFontSize;
+                color: $paragraphColor;;
                 letter-spacing: -0.07px;
                 line-height: 38px;
                 &:hover {
@@ -779,16 +790,16 @@ footer {
     p {
         opacity: 0.7;
         font-family: $karmilla;
-        font-size: 18px;
-        color: #252525;
+        font-size: $defaultFontSize;
+        color: $paragraphColor;;
         letter-spacing: -0.07px;
         line-height: 38px;
     }
     a {
         opacity: 0.7;
         font-family: $karmilla;
-        font-size: 18px;
-        color: #252525;
+        font-size: $defaultFontSize;
+        color: $paragraphColor;
         letter-spacing: -0.07px;
         line-height: 38px;
         display: block;
@@ -1075,8 +1086,8 @@ footer {
             padding: 0;
             margin: 0;
             font-family: $karmilla;
-            font-size: 1.125rem;
-            color: #252525;
+            font-size: $defaultFontSize;
+            color: $paragraphColor;
             letter-spacing: -0.07px;
             text-align: center;
             line-height: 40px;
@@ -1095,7 +1106,7 @@ footer {
         width: 100%;
         font-family: $karmillaBold;
         font-size: 2.938rem;
-        color: #252525;
+        color: $paragraphColor;
         letter-spacing: -0.19px;
         text-align: center;
         line-height: 40px;
@@ -1104,7 +1115,7 @@ footer {
         span {
             font-family: $karmilla;
             font-size: 2.4rem;
-            color: #252525;
+            color: $paragraphColor;
             letter-spacing: -0.19px;
             text-align: center;
             line-height: 40px;
@@ -1116,7 +1127,7 @@ footer {
         opacity: 0.6;
         font-family: $karmilla;
         font-size: 16px;
-        color: #252525;
+        color: $paragraphColor;
         letter-spacing: -0.06px;
         text-align: center;
         text-transform: uppercase;
@@ -1150,8 +1161,8 @@ footer {
                 background: #ffffff;
                 font-family: $karmilla;
                 padding: 10px;
-                font-size: 18px;
-                color: #252525;
+                font-size: $defaultFontSize;
+                color: $paragraphColor;
                 letter-spacing: -0.07px;
                 text-align: center;
                 line-height: 46px;
@@ -1233,8 +1244,8 @@ footer {
                 }
                 p {
                     font-family: $karmilla;
-                    font-size: 18px;
-                    color: #252525;
+                    font-size: $defaultFontSize;
+                    color: $paragraphColor;
                     letter-spacing: -0.07px;
                     line-height: 31px;
                 }
