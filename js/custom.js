@@ -129,3 +129,12 @@ jQuery(".in").each(function(){
 });
 
 jQuery(".in").height(maxHeight);
+
+
+var maxHeightBlock = 0;
+
+jQuery(".wp-block-columns .wp-block-column .wp-block-content-section").each(function(){
+  if (jQuery(this).height() > maxHeightBlock) { maxHeightBlock = jQuery(this).height(); }
+});
+
+jQuery(".wp-block-columns .wp-block-column .wp-block-content-section").height(maxHeightBlock);

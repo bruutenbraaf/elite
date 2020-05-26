@@ -216,7 +216,7 @@ nav {
                 a {
                     position: relative;
                     font-family: $karmillaBold;
-                    font-size: 17px;
+                    font-size: 1.063rem;
                     color: #ffffff;
                     letter-spacing: -0.07px;
                     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
@@ -254,7 +254,7 @@ nav {
                     position: absolute;
                     transform: rotate(45deg);
                     right: 6px;
-                    top: 11px;
+                    top: 14px;
                     border-radius: 99px;
                     transition: ease-in-out 0.2s;
                 }
@@ -266,7 +266,7 @@ nav {
                     position: absolute;
                     transform: rotate(-45deg);
                     right: 0px;
-                    top: 11px;
+                    top: 14px;
                     transition: ease-in-out 0.2s;
                     border-radius: 99px;
                 }
@@ -891,7 +891,7 @@ footer {
         .breadcrumbs {
             opacity: 0.5;
             font-family: $karmilla;
-            font-size: 16px;
+            font-size: 1rem;
             color: #ffffff;
             letter-spacing: -0.06px;
             text-transform: uppercase;
@@ -1126,7 +1126,7 @@ footer {
         display: block;
         opacity: 0.6;
         font-family: $karmilla;
-        font-size: 16px;
+        font-size: 1rem;
         color: $paragraphColor;
         letter-spacing: -0.06px;
         text-align: center;

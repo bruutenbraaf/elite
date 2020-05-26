@@ -176,7 +176,7 @@ nav {
       nav .main-navigation ul li a {
         position: relative;
         font-family: "Karmilla-Bold", Arial, sans-serif;
-        font-size: 17px;
+        font-size: 1.063rem;
         color: #ffffff;
         letter-spacing: -0.07px;
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
@@ -209,7 +209,7 @@ nav {
         position: absolute;
         transform: rotate(45deg);
         right: 6px;
-        top: 11px;
+        top: 14px;
         border-radius: 99px;
         transition: ease-in-out 0.2s; }
       nav .main-navigation ul .menu-item-has-children:before {
@@ -220,7 +220,7 @@ nav {
         position: absolute;
         transform: rotate(-45deg);
         right: 0px;
-        top: 11px;
+        top: 14px;
         transition: ease-in-out 0.2s;
         border-radius: 99px; }
       nav .main-navigation ul .menu-item-has-children:hover:after {
@@ -763,7 +763,7 @@ footer {
     .p-main .t-block .breadcrumbs {
       opacity: 0.5;
       font-family: "Karmilla-Regular", Arial, sans-serif;
-      font-size: 16px;
+      font-size: 1rem;
       color: #ffffff;
       letter-spacing: -0.06px;
       text-transform: uppercase; }
@@ -959,7 +959,7 @@ footer {
     display: block;
     opacity: 0.6;
     font-family: "Karmilla-Regular", Arial, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     color: #252525;
     letter-spacing: -0.06px;
     text-align: center;
