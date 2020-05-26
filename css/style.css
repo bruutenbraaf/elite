@@ -93,7 +93,8 @@ a {
   position: relative;
   background: #485cc7;
   transition: ease-in-out 0.2s;
-  outline: none; }
+  outline: none;
+  margin-right: 20px; }
   .btn:after,
   .wp-block-button a.wp-block-button__link:after,
   .has-blue-block-color .wp-block-buttons .wp-block-button__link:after {
