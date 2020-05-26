@@ -1067,7 +1067,8 @@ footer {
   margin: 0; }
 
 .carrousel-container {
-  position: relative; }
+  position: relative;
+  margin-bottom: 3rem; }
   .carrousel-container .carrousel-items .items .item {
     padding: 0;
     margin: 0; }
