@@ -822,7 +822,7 @@ footer {
                 letter-spacing: -0.07px;
                 line-height: 38px;
                 &:hover {
-                    color: $paragraphColor;
+                    color: $mainColor;
                     opacity: 1;
                     text-decoration: none;
                 }
@@ -846,6 +846,21 @@ footer {
         line-height: 38px;
         display: block;
         width: 100%;
+        &:hover {
+            text-decoration: none;
+            color: $mainColor;
+            svg {
+                line {
+                    stroke: $mainColor;
+                }
+                path {
+                    stroke: $mainColor;
+                }
+                polygon {
+                    stroke: $mainColor;
+                }
+            }
+        }
     }
     .c-con {
         margin-top: 50px;

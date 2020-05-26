@@ -706,7 +706,7 @@ footer {
         letter-spacing: -0.07px;
         line-height: 38px; }
         footer ul li a:hover {
-          color: #252525;
+          color: #485cc7;
           opacity: 1;
           text-decoration: none; }
   footer p {
@@ -725,6 +725,15 @@ footer {
     line-height: 38px;
     display: block;
     width: 100%; }
+    footer a:hover {
+      text-decoration: none;
+      color: #485cc7; }
+      footer a:hover svg line {
+        stroke: #485cc7; }
+      footer a:hover svg path {
+        stroke: #485cc7; }
+      footer a:hover svg polygon {
+        stroke: #485cc7; }
   footer .c-con {
     margin-top: 50px; }
     footer .c-con a {
