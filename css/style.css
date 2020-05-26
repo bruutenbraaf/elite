@@ -73,10 +73,11 @@ a {
     letter-spacing: -0.07px;
     line-height: 31px;
     padding-left: 30px;
-    padding-bottom: 24px;
+    padding-bottom: 12px;
+    padding-top: 12px;
     position: relative; }
     .has-blue-block-color ul li svg {
-      top: 9px;
+      top: 20px;
       left: 0;
       position: absolute; }
 
@@ -936,7 +937,7 @@ footer {
   margin-top: -160px;
   z-index: -1;
   padding-top: 160px;
-  margin-bottom: -140px;
+  margin-bottom: -180px;
   padding-bottom: 200px; }
 
 .wp-block-spacer {
