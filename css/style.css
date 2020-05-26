@@ -200,7 +200,8 @@ nav {
           right: auto;
           width: 100%; }
     nav .main-navigation ul .menu-item-has-children {
-      position: relative; }
+      position: relative;
+      margin-right: 24px; }
       nav .main-navigation ul .menu-item-has-children:after {
         content: "";
         width: 10px;

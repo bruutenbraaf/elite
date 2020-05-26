@@ -245,6 +245,7 @@ nav {
             }
             .menu-item-has-children {
                 position: relative;
+                margin-right: 24px;
                 &:after {
                     content: "";
                     width: 10px;
