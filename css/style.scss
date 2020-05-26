@@ -1401,7 +1401,7 @@ footer {
         font-size: 4vw;
     }
     .p-header {
-        margin-right: 32px;
+        margin-right: 0px;
     }
     .p-header:after,
     .h-header:after {
@@ -1432,13 +1432,13 @@ footer {
         display: block;
     }
     .h-header {
-        margin-right: 32px;
+        margin-right: 0px;
     }
     .h-header .container .int-block {
         margin-right: calc(-35px + -1rem);
     }
     .call-out .bg-i {
-        width: calc(100% - 32px);
+        width: 100%;
     }
     .call-out:after,
     .addmark:after {
