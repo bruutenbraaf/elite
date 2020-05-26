@@ -836,6 +836,10 @@ footer {
   overflow: hidden;
   margin-bottom: 6rem;
   z-index: 1; }
+  .wp-block-content-section .container {
+    padding: 0px; }
+  .wp-block-content-section .container-fluid {
+    padding: 15px; }
 
 .noshadow {
   box-shadow: none; }
@@ -941,9 +945,7 @@ footer {
 .block-pricespackages {
   height: 100%;
   background: #ffffff;
-  box-shadow: 0 0 44px 0 rgba(0, 0, 0, 0.1);
-  width: 100%;
-  margin: 0 15px; }
+  box-shadow: 0 0 44px 0 rgba(0, 0, 0, 0.1); }
   .block-pricespackages .title {
     background: #485cc7;
     width: 100%;
@@ -1150,6 +1152,9 @@ footer {
     background: #fff; }
   .stap img {
     max-width: 48px; }
+
+.container-fluid .container {
+  padding: 0px; }
 
 .is-style-delete-edge {
   min-width: calc(100% + 3rem);
