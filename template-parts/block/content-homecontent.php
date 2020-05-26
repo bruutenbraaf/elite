@@ -32,14 +32,14 @@ if (!empty($block['align'])) {
     <div class="container">
         <div class="row">
             <?php if (have_rows('intro_tekst')) : ?>
-                <div class="col-md-6">
+                <div class="col-xl-6 col-lg-12">
                     <?php while (have_rows('intro_tekst')) : the_row(); ?>
                         <?php the_sub_field('intro_tekst'); ?>
                         <?php if (have_rows('call_to_actions')) : ?>
                             <?php while (have_rows('call_to_actions')) : the_row(); ?>
                                 <?php $knop = get_sub_field('knop'); ?>
                                 <?php if ($knop) { ?>
-                                    <a class="btn<?php if (get_sub_field('is_secondair') == 1) { ?> secondair<?php } ?>"href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                    <a class="btn<?php if (get_sub_field('is_secondair') == 1) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
                                 <?php } ?>
                             <?php endwhile; ?>
                         <?php endif; ?>
@@ -47,15 +47,17 @@ if (!empty($block['align'])) {
                 </div>
             <?php endif; ?>
             <?php if (have_rows('qoute__team_tekst')) : ?>
-                <div class="col-md-5 offset-md-1 h-qoute d-flex align-content-between flex-wrap text-center">
+                <div class="col-xl-5 offset-xl-1 col-lg-12 h-qoute d-flex align-content-between flex-xl-wrap flex-lg-nowrap col-md-wrap text-center">
                     <?php while (have_rows('qoute__team_tekst')) : the_row(); ?>
                         <div class="content">
                             <?php the_sub_field('content'); ?>
                         </div>
                         <?php $afbeelding = get_sub_field('afbeelding'); ?>
-                        <?php if ($afbeelding) { ?>
-                            <img src="<?php echo $afbeelding['url']; ?>" alt="<?php echo $afbeelding['alt']; ?>" />
-                        <?php } ?>
+                        <div class="imgc">
+                            <?php if ($afbeelding) { ?>
+                                <img src="<?php echo $afbeelding['url']; ?>" alt="<?php echo $afbeelding['alt']; ?>" />
+                            <?php } ?>
+                        </div>
                     <?php endwhile; ?>
                 </div>
             <?php endif; ?>

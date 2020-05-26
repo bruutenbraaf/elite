@@ -597,6 +597,10 @@ nav {
 .h-content {
   position: relative;
   z-index: 2; }
+  .h-content .imgc {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end; }
   .h-content .container {
     background: #ffffff;
     box-shadow: 0 0 44px 0 rgba(0, 0, 0, 0.1);
@@ -1162,6 +1166,12 @@ footer {
   margin-bottom: -4rem;
   display: flex; }
 
+@media screen and (max-width: 1200px) {
+  .h-qoute .content {
+    width: 60%; }
+
+  .h-content .container:before {
+    display: none; } }
 @media screen and (max-width: 1080px) {
   .call-out .c-content span {
     font-size: 4vw; }
@@ -1218,6 +1228,15 @@ footer {
   .call-out .c-branding {
     margin-bottom: 2.8rem; } }
 @media screen and (max-width: 991px) {
+  .h-qoute {
+    flex-wrap: wrap !important; }
+
+  .h-qoute .content {
+    width: 100%; }
+
+  .h-content .container:before {
+    display: none; }
+
   .wp-block-quote {
     min-width: initial; }
 
