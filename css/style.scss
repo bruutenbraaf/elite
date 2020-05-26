@@ -1394,6 +1394,12 @@ footer {
 // Responsive
 
 @media screen and (max-width: 1080px) {
+    .call-out .c-content span {
+        font-size: 4vw;
+    }
+    h2 {
+        font-size: 4vw;
+    }
     .p-header {
         margin-right: 32px;
     }
@@ -1488,7 +1494,7 @@ footer {
 
 @media screen and (max-width: 814px) {
     nav {
-        width: calc(100% - 24px);
+        width: 100%;
     }
     .h-header .container .int-block {
         margin-right: calc(-24px + -5rem);
@@ -1564,6 +1570,9 @@ footer {
 }
 
 @media screen and (max-width: 575px) {
+    nav .container {
+        padding: 0px 30px;
+    }
     .block-pricespackagespreview .btn {
         top: initial;
     }
