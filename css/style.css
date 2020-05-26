@@ -979,7 +979,7 @@ footer {
       width: 100%; }
       .block-pricespackages .usp li svg {
         left: -20px;
-        top: 0;
+        top: -1px;
         position: relative;
         margin-right: -15px; }
   .block-pricespackages .price {
