@@ -131,6 +131,8 @@ a {
     padding: 14px 16px 14px 22px;
     position: relative;
     background: $mainColor;
+    transition: ease-in-out 0.2s;
+    outline: none;
     &:after {
         content: "";
         right: -20px;
@@ -144,6 +146,7 @@ a {
     }
     &:hover {
         background: #304497;
+        color: #ffffff;
         &:after {
             border-left: 20px solid #304497;
             border-bottom: 0vh solid #304497;
@@ -152,11 +155,16 @@ a {
     &:active,
     &:focus {
         background: #233375;
+        outline: none;
         &:after {
             border-left: 20px solid #233375;
             border-bottom: 0vh solid #233375;
         }
     }
+}
+
+*:focus {
+    outline: none !important;
 }
 
 .w-btn,

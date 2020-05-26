@@ -91,7 +91,9 @@ a {
   border: 0px;
   padding: 14px 16px 14px 22px;
   position: relative;
-  background: #485cc7; }
+  background: #485cc7;
+  transition: ease-in-out 0.2s;
+  outline: none; }
   .btn:after,
   .wp-block-button a.wp-block-button__link:after,
   .has-blue-block-color .wp-block-buttons .wp-block-button__link:after {
@@ -107,7 +109,8 @@ a {
   .btn:hover,
   .wp-block-button a.wp-block-button__link:hover,
   .has-blue-block-color .wp-block-buttons .wp-block-button__link:hover {
-    background: #304497; }
+    background: #304497;
+    color: #ffffff; }
     .btn:hover:after,
     .wp-block-button a.wp-block-button__link:hover:after,
     .has-blue-block-color .wp-block-buttons .wp-block-button__link:hover:after {
@@ -118,7 +121,8 @@ a {
   .wp-block-button a.wp-block-button__link:focus,
   .has-blue-block-color .wp-block-buttons .wp-block-button__link:active,
   .has-blue-block-color .wp-block-buttons .wp-block-button__link:focus {
-    background: #233375; }
+    background: #233375;
+    outline: none; }
     .btn:active:after, .btn:focus:after,
     .wp-block-button a.wp-block-button__link:active:after,
     .wp-block-button a.wp-block-button__link:focus:after,
@@ -126,6 +130,9 @@ a {
     .has-blue-block-color .wp-block-buttons .wp-block-button__link:focus:after {
       border-left: 20px solid #233375;
       border-bottom: 0vh solid #233375; }
+
+*:focus {
+  outline: none !important; }
 
 .w-btn,
 .has-blue-block-color .wp-block-buttons .wp-block-button__link {
