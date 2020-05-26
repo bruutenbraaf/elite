@@ -25,7 +25,6 @@ $defaultFontSize: 1.125rem;
 $mainColor: #485cc7;
 $paragraphColor: #252525;
 
-
 // body
 
 * {
@@ -40,7 +39,7 @@ body {
     font-size: $defaultFontSize;
     font-family: $karmilla;
     font-size: $defaultFontSize;
-    color: $paragraphColor;;
+    color: $paragraphColor;
     letter-spacing: -0.07px;
     line-height: 31px;
 }
@@ -71,7 +70,7 @@ h3 {
 p {
     font-family: $karmilla;
     font-size: $defaultFontSize;
-    color: $paragraphColor;;
+    color: $paragraphColor;
     letter-spacing: -0.07px;
     line-height: 31px;
     margin-bottom: 2rem;
@@ -290,6 +289,31 @@ nav {
                         display: block;
                         width: 100%;
                         padding: 5px 24px;
+                        a {
+                            transition-property: none;
+                            text-shadow: none;
+                            &:after {
+                                width: 100% !important;
+                                height: 1px !important;
+                                background: #fff;
+                                bottom: -6px;
+                                opacity: 0;
+                                transition: ease-in-out 0.2s;
+                            }
+                            &:hover:after {
+                                opacity: 1;
+                            }
+                            &:before {
+                                display: none !important;
+                            }
+                        }
+                    }
+                    &:before {
+                        content: "";
+                        width: 100%;
+                        height: 5px;
+                        top: -5px;
+                        position: absolute;
                     }
                 }
                 &:hover > .sub-menu {
@@ -776,7 +800,7 @@ footer {
                 opacity: 0.7;
                 font-family: $karmilla;
                 font-size: $defaultFontSize;
-                color: $paragraphColor;;
+                color: $paragraphColor;
                 letter-spacing: -0.07px;
                 line-height: 38px;
                 &:hover {
@@ -791,7 +815,7 @@ footer {
         opacity: 0.7;
         font-family: $karmilla;
         font-size: $defaultFontSize;
-        color: $paragraphColor;;
+        color: $paragraphColor;
         letter-spacing: -0.07px;
         line-height: 38px;
     }
