@@ -122,7 +122,11 @@ a {
 
 .btn,
 .wp-block-button a.wp-block-button__link,
-.has-blue-block-color .wp-block-buttons .wp-block-button__link {
+.has-blue-block-color .wp-block-buttons .wp-block-button__link,
+[type="reset"],
+[type="submit"],
+button,
+html [type="button"] {
     font-family: $karmillaBold;
     font-size: $defaultFontSize;
     color: #ffffff;
@@ -1421,6 +1425,178 @@ footer {
     padding: 4rem 3rem;
 }
 
+// forms
+.gform_body {
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+            label {
+                width: 200px;
+                margin-top: 9px;
+                .gfield_required {
+                    color: #9b9b9b;
+                }
+            }
+            div {
+                width: calc(100% - 200px);
+                input,
+                textarea {
+                    padding: 10px 16px;
+                    background: #ffffff;
+                    border: 1px solid #e2e2e2;
+                    &::placeholder {
+                        opacity: 0.5;
+                        font-family: $karmilla;
+                        font-size: 18px;
+                        color: #252525;
+                        letter-spacing: -0.07px;
+                        line-height: 31px;
+                    }
+                    &:focus {
+                        background: #ffffff;
+                        border: 1px solid #ffd500;
+                        box-shadow: 0 0 4px 0 rgba(255, 213, 0, 0.5);
+                    }
+                }
+                input {
+                    width: 80%;
+                }
+                textarea {
+                    width: 100%;
+                }
+            }
+        }
+        .gfield_error {
+            div {
+                input,
+                textarea {
+                    background: #ffffff;
+                    border: 1px solid #c70c0c;
+                }
+            }
+        }
+    }
+}
+
+[type="reset"],
+[type="submit"],
+button,
+html [type="button"] {
+    padding: 14px 25px 14px 25px !important;
+    margin-left: 200px;
+}
+
+// Errors
+
+.gform_validation_error {
+    .validation_message {
+        font-family: $karmilla;
+        font-size: 16px;
+        color: #c70c0c;
+        letter-spacing: -0.06px;
+        line-height: 31px;
+        position: relative;
+        margin-left: 220px;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 1px;
+            display: block;
+            background: #c70c0c;
+            left: -20px;
+            top: 16px;
+            transform: rotate(45deg);
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 1px;
+            display: block;
+            background: #c70c0c;
+            left: -20px;
+            top: 16px;
+            transform: rotate(-45deg);
+        }
+    }
+    .validation_error {
+        background: #c70c0c;
+        color: #fff;
+        padding: 20px 80px;
+        margin-bottom: 30px;
+        position: relative;
+        font-family: $karmilla;
+        font-size: 18px;
+        color: #ffffff;
+        letter-spacing: -0.07px;
+        line-height: 31px;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 2px;
+            display: block;
+            background: #fff;
+            left: 30px;
+            top: 34px;
+            transform: rotate(45deg);
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 2px;
+            display: block;
+            background: #fff;
+            left: 30px;
+            top: 34px;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+// Succes
+
+.gform_confirmation_message {
+    background: #82b615;
+    color: #fff;
+    padding: 20px 80px;
+    margin-bottom: 30px;
+    position: relative;
+    font-family: $karmilla;
+    font-size: 18px;
+    color: #ffffff;
+    letter-spacing: -0.07px;
+    line-height: 31px;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 2px;
+        display: block;
+        background: #fff;
+        left: 30px;
+        top: 36px;
+        transform: rotate(45deg);
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        display: block;
+        background: #fff;
+        left: 34px;
+        top: 34px;
+        transform: rotate(-45deg);
+    }
+}
+
 // Responsive
 
 @media screen and (max-width: 1200px) {
@@ -1526,6 +1702,76 @@ footer {
 }
 
 @media screen and (max-width: 991px) {
+    // forms
+    .gform_body {
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 14px;
+                label {
+                    width: 200px;
+                    margin-top: 9px;
+                    .gfield_required {
+                        color: #9b9b9b;
+                    }
+                }
+                div {
+                    width: 100%;
+                    input,
+                    textarea {
+                        padding: 10px 16px;
+                        background: #ffffff;
+                        border: 1px solid #e2e2e2;
+                        &::placeholder {
+                            opacity: 0.5;
+                            font-family: $karmilla;
+                            font-size: 18px;
+                            color: #252525;
+                            letter-spacing: -0.07px;
+                            line-height: 31px;
+                        }
+                        &:focus {
+                            background: #ffffff;
+                            border: 1px solid #ffd500;
+                            box-shadow: 0 0 4px 0 rgba(255, 213, 0, 0.5);
+                        }
+                    }
+                    input {
+                        width: 80%;
+                    }
+                    textarea {
+                        width: 100%;
+                    }
+                }
+            }
+            .gfield_error {
+                div {
+                    input,
+                    textarea {
+                        background: #ffffff;
+                        border: 1px solid #c70c0c;
+                    }
+                }
+            }
+        }
+    }
+
+    .gform_validation_error {
+        .validation_message {
+            margin-left: 20px;
+        }
+    }
+
+    [type="reset"],
+    [type="submit"],
+    button,
+    html [type="button"] {
+        margin-left: 0px;
+    }
+
     .h-qoute {
         flex-wrap: wrap !important;
     }

@@ -83,7 +83,11 @@ a {
 
 .btn,
 .wp-block-button a.wp-block-button__link,
-.has-blue-block-color .wp-block-buttons .wp-block-button__link {
+.has-blue-block-color .wp-block-buttons .wp-block-button__link,
+[type="reset"],
+[type="submit"],
+button,
+html [type="button"] {
   font-family: "Karmilla-Bold", Arial, sans-serif;
   font-size: 1.125rem;
   color: #ffffff;
@@ -98,7 +102,11 @@ a {
   margin-right: 20px; }
   .btn:after,
   .wp-block-button a.wp-block-button__link:after,
-  .has-blue-block-color .wp-block-buttons .wp-block-button__link:after {
+  .has-blue-block-color .wp-block-buttons .wp-block-button__link:after,
+  [type="reset"]:after,
+  [type="submit"]:after,
+  button:after,
+  html [type="button"]:after {
     content: "";
     right: -20px;
     top: 0px;
@@ -110,26 +118,50 @@ a {
     transition: ease-in-out 0.2s; }
   .btn:hover,
   .wp-block-button a.wp-block-button__link:hover,
-  .has-blue-block-color .wp-block-buttons .wp-block-button__link:hover {
+  .has-blue-block-color .wp-block-buttons .wp-block-button__link:hover,
+  [type="reset"]:hover,
+  [type="submit"]:hover,
+  button:hover,
+  html [type="button"]:hover {
     background: #304497;
     color: #ffffff; }
     .btn:hover:after,
     .wp-block-button a.wp-block-button__link:hover:after,
-    .has-blue-block-color .wp-block-buttons .wp-block-button__link:hover:after {
+    .has-blue-block-color .wp-block-buttons .wp-block-button__link:hover:after,
+    [type="reset"]:hover:after,
+    [type="submit"]:hover:after,
+    button:hover:after,
+    html [type="button"]:hover:after {
       border-left: 20px solid #304497;
       border-bottom: 0vh solid #304497; }
   .btn:active, .btn:focus,
   .wp-block-button a.wp-block-button__link:active,
   .wp-block-button a.wp-block-button__link:focus,
   .has-blue-block-color .wp-block-buttons .wp-block-button__link:active,
-  .has-blue-block-color .wp-block-buttons .wp-block-button__link:focus {
+  .has-blue-block-color .wp-block-buttons .wp-block-button__link:focus,
+  [type="reset"]:active,
+  [type="reset"]:focus,
+  [type="submit"]:active,
+  [type="submit"]:focus,
+  button:active,
+  button:focus,
+  html [type="button"]:active,
+  html [type="button"]:focus {
     background: #233375;
     outline: none; }
     .btn:active:after, .btn:focus:after,
     .wp-block-button a.wp-block-button__link:active:after,
     .wp-block-button a.wp-block-button__link:focus:after,
     .has-blue-block-color .wp-block-buttons .wp-block-button__link:active:after,
-    .has-blue-block-color .wp-block-buttons .wp-block-button__link:focus:after {
+    .has-blue-block-color .wp-block-buttons .wp-block-button__link:focus:after,
+    [type="reset"]:active:after,
+    [type="reset"]:focus:after,
+    [type="submit"]:active:after,
+    [type="submit"]:focus:after,
+    button:active:after,
+    button:focus:after,
+    html [type="button"]:active:after,
+    html [type="button"]:focus:after {
       border-left: 20px solid #233375;
       border-bottom: 0vh solid #233375; }
 
@@ -1181,6 +1213,146 @@ footer {
 .wp-block-content-section .wp-block-columns .wp-block-column .wp-block-content-section {
   padding: 4rem 3rem; }
 
+.gform_body ul {
+  margin: 0;
+  padding: 0; }
+  .gform_body ul li {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 14px; }
+    .gform_body ul li label {
+      width: 200px;
+      margin-top: 9px; }
+      .gform_body ul li label .gfield_required {
+        color: #9b9b9b; }
+    .gform_body ul li div {
+      width: calc(100% - 200px); }
+      .gform_body ul li div input,
+      .gform_body ul li div textarea {
+        padding: 10px 16px;
+        background: #ffffff;
+        border: 1px solid #e2e2e2; }
+        .gform_body ul li div input::placeholder,
+        .gform_body ul li div textarea::placeholder {
+          opacity: 0.5;
+          font-family: "Karmilla-Regular", Arial, sans-serif;
+          font-size: 18px;
+          color: #252525;
+          letter-spacing: -0.07px;
+          line-height: 31px; }
+        .gform_body ul li div input:focus,
+        .gform_body ul li div textarea:focus {
+          background: #ffffff;
+          border: 1px solid #ffd500;
+          box-shadow: 0 0 4px 0 rgba(255, 213, 0, 0.5); }
+      .gform_body ul li div input {
+        width: 80%; }
+      .gform_body ul li div textarea {
+        width: 100%; }
+  .gform_body ul .gfield_error div input,
+  .gform_body ul .gfield_error div textarea {
+    background: #ffffff;
+    border: 1px solid #c70c0c; }
+
+[type="reset"],
+[type="submit"],
+button,
+html [type="button"] {
+  padding: 14px 25px 14px 25px !important;
+  margin-left: 200px; }
+
+.gform_validation_error .validation_message {
+  font-family: "Karmilla-Regular", Arial, sans-serif;
+  font-size: 16px;
+  color: #c70c0c;
+  letter-spacing: -0.06px;
+  line-height: 31px;
+  position: relative;
+  margin-left: 220px; }
+  .gform_validation_error .validation_message:before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 1px;
+    display: block;
+    background: #c70c0c;
+    left: -20px;
+    top: 16px;
+    transform: rotate(45deg); }
+  .gform_validation_error .validation_message:after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 1px;
+    display: block;
+    background: #c70c0c;
+    left: -20px;
+    top: 16px;
+    transform: rotate(-45deg); }
+.gform_validation_error .validation_error {
+  background: #c70c0c;
+  color: #fff;
+  padding: 20px 80px;
+  margin-bottom: 30px;
+  position: relative;
+  font-family: "Karmilla-Regular", Arial, sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: -0.07px;
+  line-height: 31px; }
+  .gform_validation_error .validation_error:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    display: block;
+    background: #fff;
+    left: 30px;
+    top: 34px;
+    transform: rotate(45deg); }
+  .gform_validation_error .validation_error:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    display: block;
+    background: #fff;
+    left: 30px;
+    top: 34px;
+    transform: rotate(-45deg); }
+
+.gform_confirmation_message {
+  background: #82b615;
+  color: #fff;
+  padding: 20px 80px;
+  margin-bottom: 30px;
+  position: relative;
+  font-family: "Karmilla-Regular", Arial, sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: -0.07px;
+  line-height: 31px; }
+  .gform_confirmation_message:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    display: block;
+    background: #fff;
+    left: 30px;
+    top: 36px;
+    transform: rotate(45deg); }
+  .gform_confirmation_message:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    display: block;
+    background: #fff;
+    left: 34px;
+    top: 34px;
+    transform: rotate(-45deg); }
+
 @media screen and (max-width: 1200px) {
   .h-qoute .content {
     width: 60%; }
@@ -1274,6 +1446,56 @@ footer {
   .call-out .c-branding {
     margin-bottom: 2.8rem; } }
 @media screen and (max-width: 991px) {
+  .gform_body ul {
+    margin: 0;
+    padding: 0; }
+    .gform_body ul li {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 14px; }
+      .gform_body ul li label {
+        width: 200px;
+        margin-top: 9px; }
+        .gform_body ul li label .gfield_required {
+          color: #9b9b9b; }
+      .gform_body ul li div {
+        width: 100%; }
+        .gform_body ul li div input,
+        .gform_body ul li div textarea {
+          padding: 10px 16px;
+          background: #ffffff;
+          border: 1px solid #e2e2e2; }
+          .gform_body ul li div input::placeholder,
+          .gform_body ul li div textarea::placeholder {
+            opacity: 0.5;
+            font-family: "Karmilla-Regular", Arial, sans-serif;
+            font-size: 18px;
+            color: #252525;
+            letter-spacing: -0.07px;
+            line-height: 31px; }
+          .gform_body ul li div input:focus,
+          .gform_body ul li div textarea:focus {
+            background: #ffffff;
+            border: 1px solid #ffd500;
+            box-shadow: 0 0 4px 0 rgba(255, 213, 0, 0.5); }
+        .gform_body ul li div input {
+          width: 80%; }
+        .gform_body ul li div textarea {
+          width: 100%; }
+    .gform_body ul .gfield_error div input,
+    .gform_body ul .gfield_error div textarea {
+      background: #ffffff;
+      border: 1px solid #c70c0c; }
+
+  .gform_validation_error .validation_message {
+    margin-left: 20px; }
+
+  [type="reset"],
+  [type="submit"],
+  button,
+  html [type="button"] {
+    margin-left: 0px; }
+
   .h-qoute {
     flex-wrap: wrap !important; }
 
