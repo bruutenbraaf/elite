@@ -1231,7 +1231,12 @@ footer {
       .gform_body ul li div textarea {
         padding: 10px 16px;
         background: #ffffff;
-        border: 1px solid #e2e2e2; }
+        border: 1px solid #e2e2e2;
+        font-family: "Karmilla-Regular", Arial, sans-serif;
+        font-size: 18px;
+        color: #252525;
+        letter-spacing: -0.07px;
+        line-height: 31px; }
         .gform_body ul li div input::placeholder,
         .gform_body ul li div textarea::placeholder {
           opacity: 0.5;
