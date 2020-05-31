@@ -55,7 +55,7 @@ h2 {
     font-size: 3rem;
     letter-spacing: -0.19px;
     line-height: 66px;
-    margin-bottom: 2rem !important;
+    margin-bottom: 2rem;
 }
 
 h3 {
@@ -1423,10 +1423,30 @@ footer {
 }
 
 @media screen and (max-width: 1080px) {
-    .call-out .c-content span {
-        font-size: 4vw;
+    .h-header .container .int-block h1,
+    .p-main .t-block h1 {
+        font-size: 1.5rem;
     }
-    h2 {
+    .h-header .container .int-block .h-sub {
+        font-size: 1.1rem;
+    }
+    .p-main .t-block .breadcrumbs {
+        font-size: 15px;
+    }
+    p {
+        font-size: 15px;
+        line-height: inherit;
+    }
+    footer p {
+        font-size: 15px;
+        line-height: inherit;
+    }
+    footer ul li a,
+    footer .c-con a {
+        font-size: 15px;
+        line-height: inherit;
+    }
+    .call-out .c-content span {
         font-size: 4vw;
     }
     .p-header {
@@ -1437,11 +1457,17 @@ footer {
         width: 200px;
         height: 80px;
     }
-    .block-pricespackages {
-        margin-left: inherit;
-    }
     .main-navigation {
         display: none;
+    }
+    .wp-block-columns {
+        margin:0px;
+    }
+    .wp-block-column {
+        margin-top: 0px;
+        margin-left:0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
     }
     nav {
         width: 100%;
@@ -1502,10 +1528,6 @@ footer {
     .wp-block-column {
         flex-basis: 100% !important;
     }
-    .wp-block-column:not(:first-child) {
-        margin-left: 0px;
-        margin-top: 40px;
-    }
     .h-header .container .int-block {
         margin-right: calc(-35px + -6rem);
         padding-right: 6rem;
@@ -1558,7 +1580,7 @@ footer {
     }
     .p-main .t-block {
         margin-left: 0px;
-        min-width: 80%;
+        min-width: 100%;
     }
     .addmark {
         position: relative;
@@ -1566,6 +1588,14 @@ footer {
     }
 }
 @media screen and (max-width: 768px) {
+    .h-qoute .content p {
+        font-size: 1.2rem;
+    }
+
+    .h-content .container {
+        padding-top: 4rem;
+    }
+
     .carrousel-container .carrousel-items .items .item:nth-child(1) {
         padding-bottom: 20px;
         padding-right: 0px;
@@ -1611,14 +1641,33 @@ footer {
     nav .container {
         padding: 0px 30px;
     }
+    .mobile-nav .container .row ul li a {
+        font-size: 1.4rem;
+    }
+    .mobile-nav .container .row ul .menu-item-has-children > a:before,
+    .mobile-nav .container .row ul .menu-item-has-children > a:after {
+        width: 14px;
+        min-height: 3px;
+    }
+    .mobile-nav .container .row ul .menu-item-has-children > a:before {
+        right: -39px;
+    }
     .block-pricespackagespreview .btn {
         top: initial;
     }
     h2 {
-        font-size: 2.4rem;
+        font-size: 1.5rem;
         letter-spacing: -0.19px;
-        line-height: initial;
-        margin-bottom: 1.4rem !important;
+        line-height: inherit;
+        margin-bottom: inherit;
+    }
+    h3 {
+        font-size: 1.1rem;
+        line-height: inherit;
+        margin-bottom: inherit;
+    }
+    p {
+        margin-bottom: 30px;
     }
     nav {
         width: 100%;
@@ -1675,13 +1724,22 @@ footer {
         margin: 0px 0px 15px 0px;
     }
     .wp-block-content-section {
-        padding: 60px 30px;
+        padding: 30px 15px 0px 15px;
         margin-left: 0px;
         width: 100%;
     }
+    .p-main .t-block {
+        overflow: hidden;
+        padding: 40px 30px 30px 30px;
+        position: relative;
+        z-index: 1;
+        min-width: 35rem;
+    }
+    .wp-block-content-section {
+        margin-bottom: 30px;
+    }
     .negative {
         padding-top: 160px !important;
-        padding-bottom: 200px !important;
         margin-left: 0px !important;
         width: calc(100%) !important;
         padding-left: 15px;
