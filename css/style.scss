@@ -1411,6 +1411,10 @@ footer {
     display: flex;
 }
 
+.wp-block-content-section .wp-block-columns .wp-block-column .wp-block-content-section {
+    padding: 4rem 3rem;
+}
+
 // Responsive
 
 @media screen and (max-width: 1200px) {
@@ -1423,6 +1427,12 @@ footer {
 }
 
 @media screen and (max-width: 1080px) {
+    .wp-block-content-section .wp-block-columns .wp-block-column .wp-block-content-section {
+        padding: 30px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
     .h-header .container .int-block h1,
     .p-main .t-block h1 {
         font-size: 1.5rem;
@@ -1461,11 +1471,11 @@ footer {
         display: none;
     }
     .wp-block-columns {
-        margin:0px;
+        margin: 0px;
     }
     .wp-block-column {
         margin-top: 0px;
-        margin-left:0px;
+        margin-left: 0px;
         margin-right: 0px;
         margin-bottom: 30px;
     }
@@ -1643,6 +1653,9 @@ footer {
     }
     .mobile-nav .container .row ul li a {
         font-size: 1.4rem;
+        &:hover {
+            text-decoration: none;
+        }
     }
     .mobile-nav .container .row ul .menu-item-has-children > a:before,
     .mobile-nav .container .row ul .menu-item-has-children > a:after {
