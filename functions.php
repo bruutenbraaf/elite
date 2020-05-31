@@ -373,6 +373,11 @@ add_theme_support('editor-color-palette', array(
 		'slug'  => 'Paragraph',
 		'color' => '#252525',
 	),
+	array(
+		'name'  => __('White', 'ea_genesis_child'),
+		'slug'  => 'white',
+		'color' => '#ffffff',
+	),
 ));
 
 add_theme_support('disable-custom-colors');

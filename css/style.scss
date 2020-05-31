@@ -1005,6 +1005,8 @@ footer {
     overflow: hidden;
     margin-bottom: 6rem;
     z-index: 1;
+    background-size: cover;
+    background-position: center center;
     .container {
         padding: 0px;
     }
@@ -1407,7 +1409,7 @@ footer {
 
 .is-style-delete-edge {
     min-width: calc(100% + 3rem);
-    margin-bottom: -4rem;
+    margin-bottom: -6rem;
     display: flex;
 }
 
