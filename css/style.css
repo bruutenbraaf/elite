@@ -1136,6 +1136,9 @@ footer {
     .carrousel-container .next-slide:hover {
       right: -68px; }
 
+.has-white-color {
+  color: #ffffff; }
+
 .stap {
   position: relative; }
   .stap .icon {
